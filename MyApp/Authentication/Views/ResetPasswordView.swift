@@ -20,12 +20,11 @@ final class ResetPasswordViewModel: ObservableObject {
 }
 
 struct ResetPasswordView: View {
+    @EnvironmentObject var coordinator: AuthenticationFlowCoordinator<AuthenticationFlowRouter>
     @StateObject private var viewModel: ResetPasswordViewModel
-    @Binding private var shouldShowSignIn: Bool
 
-    init(viewModel: ResetPasswordViewModel, shouldShowSignIn: Binding<Bool>) {
+    init(viewModel: ResetPasswordViewModel) {
         self._viewModel = StateObject(wrappedValue: viewModel)
-        self._shouldShowSignIn = shouldShowSignIn
     }
     var body: some View {
         VStack {
@@ -62,5 +61,5 @@ struct ResetPasswordView: View {
 #Preview {
     let authManger = AuthManager()
     let viewModel = SignUpWithEmailViewModel(authManager: authManger)
-    return SignUpWithEmailView(viewModel: viewModel, shouldShowSignIn: .constant(false))
+    return SignUpWithEmailView(viewModel: viewModel)
 }

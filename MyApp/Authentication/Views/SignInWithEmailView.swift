@@ -21,12 +21,11 @@ final class SignInWithEmailViewModel: ObservableObject {
 }
 
 struct SignInWithEmailView: View {
+    @EnvironmentObject var coordinator: AuthenticationFlowCoordinator<AuthenticationFlowRouter>
     @StateObject private var viewModel: SignInWithEmailViewModel
-    @Binding private var shouldShowSignIn: Bool
 
-    init(viewModel: SignInWithEmailViewModel, shouldShowSignIn: Binding<Bool>) {
+    init(viewModel: SignInWithEmailViewModel) {
         self._viewModel = StateObject(wrappedValue: viewModel)
-        self._shouldShowSignIn = shouldShowSignIn
     }
     var body: some View {
         VStack {
@@ -44,7 +43,7 @@ struct SignInWithEmailView: View {
                 Task {
                     do {
                         try await viewModel.signIn()
-                        shouldShowSignIn = false
+                        coordinator.userSignedIn()
                     } catch {
                         //MARK: show error alert to user
                         print("failed to sign in with error \(error)")
@@ -70,5 +69,5 @@ struct SignInWithEmailView: View {
 #Preview {
     let authManger = AuthManager()
     let viewModel = SignInWithEmailViewModel(authManager: authManger)
-    return SignInWithEmailView(viewModel: viewModel, shouldShowSignIn: .constant(false))
+    return SignInWithEmailView(viewModel: viewModel)
 }

@@ -13,7 +13,11 @@ struct AuthUserModel {
     }
 }
 
-final class AuthManager {
+final class AuthManager: Equatable {
+    static func == (lhs: AuthManager, rhs: AuthManager) -> Bool {
+        return true
+    }
+
     @discardableResult
     func createUser(email: String, password: String) async throws -> AuthUserModel {
         let authDataResult = try await Auth.auth().createUser(withEmail: email, password: password)

@@ -1,64 +1,38 @@
-//
-//  HomeView.swift
-//  MyApp
-//
-//  Created by Karim Alsaka on 12/04/2024.
-//
-
 import SwiftUI
 
 final class HomeViewModel: ObservableObject {
-    private var authManager: AuthManager
     
-    init(authManager: AuthManager) {
-        self.authManager = authManager
-    }
-    
-    func signOut() throws {
-        try authManager.signOut()
-    }
 }
 
 struct HomeView: View {
+    @EnvironmentObject var coordinator: HomeFlowCoordinator<HomeFlowRouter>
     @StateObject private var viewModel: HomeViewModel
-    @Binding private var shouldShowSignIn: Bool
 
-    init(viewModel: HomeViewModel, shouldShowSignIn: Binding<Bool>) {
+    init(viewModel: HomeViewModel) {
         self._viewModel = StateObject(wrappedValue: viewModel)
-        self._shouldShowSignIn = shouldShowSignIn
     }
     
     var body: some View {
-        VStack {
-            Spacer()
-            
-            Button {
-                Task {
-                    do {
-                        try viewModel.signOut()
-                        shouldShowSignIn = true
-                    } catch {
-                        //MARK: show error alert to user
-                        print("error")
-                    }
-                }
-            } label: {
-                Text("Sign Out")
-                    .font(.headline)
-                    .foregroundStyle(Color.white)
-                    .frame(height: 55)
-                    .frame(maxWidth: .infinity)
-                    .background(Color.blue)
-                    .cornerRadius(10)
-
+        ScrollView {
+            VStack(alignment: .leading) {
+                Text("Home")
+                    .font(.title)
+                    .fontWeight(.bold)
+                
+                Text("This is home")
+                    .font(.subheadline)
+                    .fontWeight(.semibold)
             }
+            .padding()
+            .navigationTitle("Home")
+            .frame(maxWidth: .infinity)
+
         }
-        .padding()
-        .navigationTitle("Home")
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
     }
 }
 
 #Preview {
-    let viewModel = HomeViewModel(authManager: AuthManager())
-    return HomeView(viewModel: viewModel, shouldShowSignIn: .constant(false))
+    let viewModel = HomeViewModel()
+    return HomeView(viewModel: viewModel)
 }

@@ -15,19 +15,18 @@ final class SignUpWithEmailViewModel: ObservableObject {
         guard !email.isEmpty, !password.isEmpty else {
             return
         }
-        
         try await authManager.createUser(email: email, password: password)
     }
 }
 
 struct SignUpWithEmailView: View {
+    @EnvironmentObject var coordinator: AuthenticationFlowCoordinator<AuthenticationFlowRouter>
     @StateObject private var viewModel: SignUpWithEmailViewModel
-    @Binding private var shouldShowSignIn: Bool
 
-    init(viewModel: SignUpWithEmailViewModel, shouldShowSignIn: Binding<Bool>) {
+    init(viewModel: SignUpWithEmailViewModel) {
         self._viewModel = StateObject(wrappedValue: viewModel)
-        self._shouldShowSignIn = shouldShowSignIn
     }
+
     var body: some View {
         VStack {
             TextField("Email", text: $viewModel.email)
@@ -44,7 +43,7 @@ struct SignUpWithEmailView: View {
                 Task {
                     do {
                         try await viewModel.signUp()
-                        shouldShowSignIn = false
+                        coordinator.userSignedIn()
                     } catch {
                         //MARK: show error alert to user
                         print("failed to sign up with error \(error)")
@@ -62,12 +61,12 @@ struct SignUpWithEmailView: View {
             }
         }
         .padding()
-        .navigationTitle("Sign in with email")
+        .navigationTitle("Sign up with email")
     }
 }
 
 #Preview {
     let authManger = AuthManager()
     let viewModel = SignUpWithEmailViewModel(authManager: authManger)
-    return SignUpWithEmailView(viewModel: viewModel, shouldShowSignIn: .constant(false))
+    return SignUpWithEmailView(viewModel: viewModel)
 }
