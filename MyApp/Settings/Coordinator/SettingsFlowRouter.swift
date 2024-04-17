@@ -1,22 +1,9 @@
 import SwiftUI
 
 enum SettingsFlowRouter: NavigationRouter, Equatable {
-    case signOut(authManager: AuthManager)
-    
-    var title: String {
-        switch self {
-        case .signOut:
-            return "Home"
-        }
-    }
-    
-//    var imageName: String {
-//        switch self {
-//        case .home:
-//            return "ic_search_white"
-//        }
-//    }
-
+    case settings(authManager: AuthManager)
+    case accountSettings
+        
     var transition: NavigationTranisitionStyle {
         .push
     }
@@ -24,9 +11,12 @@ enum SettingsFlowRouter: NavigationRouter, Equatable {
     @MainActor @ViewBuilder
     func view() -> some View {
         switch self {
-        case .signOut(let authManager):
+        case .settings(let authManager):
             let viewModel = SettingsViewModel(authManager: authManager)
             SettingsView(viewModel: viewModel)
+        case .accountSettings:
+            let viewModel = ManageAccountViewModel()
+            ManageAccountView(viewModel: viewModel)
         }
     }
 }

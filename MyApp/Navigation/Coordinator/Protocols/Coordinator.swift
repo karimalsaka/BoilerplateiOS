@@ -37,7 +37,7 @@ open class Coordinator<Router: NavigationRouter>: NSObject, CoordinatorProtocol 
         viewController.view.frame = UIScreen.main.bounds
         
         navigationController.navigationBar.tintColor = .black
-
+        
         if hideNavBar {
             navigationController.setNavigationBarHidden(true, animated: false)
         } else {
@@ -88,5 +88,3 @@ extension View {
         return modifiedView
     }
 }
-
-

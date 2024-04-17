@@ -9,13 +9,6 @@ enum HomeFlowRouter: NavigationRouter, Equatable {
             return "Home"
         }
     }
-    
-//    var imageName: String {
-//        switch self {
-//        case .home:
-//            return "ic_search_white"
-//        }
-//    }
 
     var transition: NavigationTranisitionStyle {
         switch self {

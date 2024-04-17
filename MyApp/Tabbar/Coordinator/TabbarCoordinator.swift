@@ -44,7 +44,7 @@ class TabBarCoordinator<Router: NavigationRouter>: Coordinator<TabBarRouter> {
         navController.setNavigationBarHidden(true, animated: false)
 
         navController.tabBarItem = UITabBarItem.init(title: tab.title,
-                                                     image: UIImage(named: "star"),
+                                                     image: UIImage(systemName: tab.imageName),
                                                      tag: tab.tabIndex)
         navController.tabBarItem.imageInsets = UIEdgeInsets(top: 10, left: 0, bottom: -10, right: 0)
 

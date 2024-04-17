@@ -56,7 +56,7 @@ struct SignUpWithEmailView: View {
                     .foregroundStyle(Color.white)
                     .frame(height: 55)
                     .frame(maxWidth: .infinity)
-                    .background(Color.blue)
+                    .background(Color.cyan)
                     .cornerRadius(10)
             }
         }

@@ -7,6 +7,7 @@ struct MyAppApp: App {
     var body: some Scene {
         WindowGroup {
             NavigationController()
+                .ignoresSafeArea()
         }
     }
 }

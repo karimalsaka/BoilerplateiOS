@@ -13,14 +13,14 @@ enum TabBarRouter: NavigationRouter, Equatable {
         }
     }
     
-//    var imageName: String {
-//        switch self {
-//        case .home:
-//            return "ic_search_white"
-//        case .settings:
-//            return "ic_home"
-//        }
-//    }
+    var imageName: String {
+        switch self {
+        case .home:
+            return "house"
+        case .settings:
+            return "gear"
+        }
+    }
     
     var tabIndex: Int {
         switch self {

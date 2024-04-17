@@ -18,57 +18,59 @@ struct AuthenticationOptionsView: View {
     }
     
     var body: some View {
-        ScrollView {
-            VStack(alignment: .leading) {
-                 Text("Sign In")
-                     .font(.title)
-                     .fontWeight(.bold)
-                
-                 Spacer()
-                 
-                Button {
-                    coordinator.show(.signUpWithEmail(authManager: viewModel.authManager))
-                } label: {
-                    Text("Sign Up with Email")
-                        .font(.headline)
-                        .foregroundStyle(Color.white)
-                        .frame(height: 55)
-                        .frame(maxWidth: .infinity)
-                        .background(Color.blue)
-                        .cornerRadius(10)
-                }
+            ScrollView {
+                VStack(alignment: .leading, spacing: 10) {
+                    
+                    // replace with image lol
+                    Rectangle()
+                        .foregroundStyle(Color.cyan)
+                        .frame(width: .infinity, height: 300)
+                        .clipShape(RoundedRectangle(cornerRadius: 20))
+                        .padding(.top, 30)
+                        .padding(.bottom, 50)
+                     Spacer()
 
-                Button {
-                    coordinator.show(.signInWithEmail(authManager: viewModel.authManager))
-                } label: {
-                    Text("Sign In with Email")
-                        .font(.headline)
-                        .foregroundStyle(Color.white)
-                        .frame(height: 55)
-                        .frame(maxWidth: .infinity)
-                        .background(Color.blue)
-                        .cornerRadius(10)
+                    Button {
+                        coordinator.show(.signUpWithEmail(authManager: viewModel.authManager))
+                    } label: {
+                        Text("Sign Up with Email")
+                            .font(.headline)
+                            .foregroundStyle(Color.white)
+                            .frame(height: 55)
+                            .frame(maxWidth: .infinity)
+                            .background(Color.cyan)
+                            .cornerRadius(10)
+                    }
+
+                    Button {
+                        coordinator.show(.signInWithEmail(authManager: viewModel.authManager))
+                    } label: {
+                        Text("Sign In with Email")
+                            .font(.headline)
+                            .foregroundStyle(Color.white)
+                            .frame(height: 55)
+                            .frame(maxWidth: .infinity)
+                            .background(Color.cyan)
+                            .cornerRadius(10)
+                    }
+                    
+                    Button {
+                        coordinator.show(.resetPassword(authManager: viewModel.authManager))
+                    } label: {
+                        Text("Forgot Password?")
+                            .font(.headline)
+                            .foregroundStyle(Color.white)
+                            .frame(height: 55)
+                            .frame(maxWidth: .infinity)
+                            .background(Color.red)
+                            .cornerRadius(10)
+                    }
+                     
+                     Spacer()
                 }
-                
-                Button {
-                    coordinator.show(.resetPassword(authManager: viewModel.authManager))
-                } label: {
-                    Text("Forgot Password?")
-                        .font(.headline)
-                        .foregroundStyle(Color.white)
-                        .frame(height: 55)
-                        .frame(maxWidth: .infinity)
-                        .background(Color.red)
-                        .cornerRadius(10)
-                }
-                 
-                 Spacer()
             }
-        }
-        .padding()
-        .background(Color.yellow)
-        .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .ignoresSafeArea(edges: .all)
+            .padding()
+            .frame(maxWidth: .infinity, maxHeight: .infinity)
     }
 }
 
@@ -78,5 +80,3 @@ struct AuthenticationOptionsView: View {
 
     return AuthenticationOptionsView(viewModel: viewModel)
 }
-
-import SwiftUI

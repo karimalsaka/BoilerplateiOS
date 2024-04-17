@@ -13,22 +13,17 @@ struct HomeView: View {
     }
     
     var body: some View {
-        ScrollView {
-            VStack(alignment: .leading) {
-                Text("Home")
-                    .font(.title)
-                    .fontWeight(.bold)
-                
-                Text("This is home")
-                    .font(.subheadline)
-                    .fontWeight(.semibold)
+         ScrollView {
+             VStack {
+                    Text("Welcome to your home screen")
+                        .font(.headline)
+                        .fontWeight(.semibold)
+                Spacer()
             }
             .padding()
             .navigationTitle("Home")
-            .frame(maxWidth: .infinity)
-
+            .frame(maxWidth: .infinity, maxHeight: .infinity)
         }
-        .frame(maxWidth: .infinity, maxHeight: .infinity)
     }
 }
 
