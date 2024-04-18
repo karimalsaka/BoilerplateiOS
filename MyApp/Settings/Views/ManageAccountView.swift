@@ -1,9 +1,5 @@
 import SwiftUI
 
-final class ManageAccountViewModel: ObservableObject {
-    
-}
-
 struct ManageAccountView: View {
     @EnvironmentObject var coordinator: SettingsFlowCoordinator<SettingsFlowRouter>
     @StateObject private var viewModel: ManageAccountViewModel

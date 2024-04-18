@@ -1,6 +1,6 @@
 import SwiftUI
 
-enum MainCoordinatorRouter: NavigationRouter, Equatable {
+enum AppRouter: NavigationRouter, Equatable {
     case main
     
     @ViewBuilder

@@ -30,10 +30,42 @@
             filePath = "MyApp/Authentication/Views/AuthenticationOptionsView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "173"
-            endingLineNumber = "173"
+            startingLineNumber = "76"
+            endingLineNumber = "76"
             landmarkName = "body"
             landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "9A0DF9B3-DCBB-49A2-95C7-ED9C929866E9 - 7eb858eb23f1e79b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MyApp.AuthenticationOptionsViewModel.randomNonceString(length: Swift.Int) -&gt; Swift.String"
+                  moduleName = "MyApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/karimalsaka/Documents/GitHub/MyApp/MyApp/Authentication/Views/AuthenticationOptionsView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "80"
+                  endingLineNumber = "80"
+                  offsetFromSymbolStart = "2164">
+               </Location>
+               <Location
+                  uuid = "9A0DF9B3-DCBB-49A2-95C7-ED9C929866E9 - 26e52cf44b252797"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 (Swift.Bool) -&gt; () in MyApp.AuthenticationOptionsView.body.getter : some"
+                  moduleName = "MyApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/karimalsaka/Documents/GitHub/MyApp/MyApp/Authentication/Views/AuthenticationOptionsView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "76"
+                  endingLineNumber = "76"
+                  offsetFromSymbolStart = "52">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

@@ -1,10 +1,10 @@
 import UIKit
 
 class AuthenticationFlowCoordinator<Router: NavigationRouter>: Coordinator<AuthenticationFlowRouter> {
-    private let mainCoordinator: MainCoordinator<MainCoordinatorRouter>?
+    private let appCoordinator: AppCoordinator<AppRouter>?
     
-    init(navigationController: UINavigationController = .init(), mainCoordinator: Coordinator<MainCoordinatorRouter>, authManager: AuthManager, startingRoute: AuthenticationFlowRouter? = nil) {
-        self.mainCoordinator = mainCoordinator as? MainCoordinator<MainCoordinatorRouter>
+    init(navigationController: UINavigationController = .init(), appCoordinator: Coordinator<AppRouter>, authManager: AuthManager, startingRoute: AuthenticationFlowRouter? = nil) {
+        self.appCoordinator = appCoordinator as? AppCoordinator<AppRouter>
         super.init(navigationController: navigationController, startingRoute: .authenticationOptionsView(authManager: authManager))
     }
     
@@ -17,6 +17,6 @@ class AuthenticationFlowCoordinator<Router: NavigationRouter>: Coordinator<Authe
 
     func userSignedIn() {
         navigationController.setViewControllers([], animated: false)
-        mainCoordinator?.showMainAppFlow()
+        appCoordinator?.showMainAppFlow()
     }
 }

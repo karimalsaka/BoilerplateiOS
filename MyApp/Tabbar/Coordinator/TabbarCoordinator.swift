@@ -4,14 +4,14 @@ import SwiftUI
 class TabBarCoordinator<Router: NavigationRouter>: Coordinator<TabBarRouter> {
     var tabBarController: UITabBarController
     var authManager: AuthManager
-    var mainCoordinator: MainCoordinator<MainCoordinatorRouter>?
+    var appCoordinator: AppCoordinator<AppRouter>?
     
     init(
         navigationController: UINavigationController = .init(),
-        mainCoordinator: Coordinator<MainCoordinatorRouter>,
+        appCoordinator: Coordinator<AppRouter>,
         authManager: AuthManager,
         startingRoute: TabBarRouter? = nil) {
-            self.mainCoordinator = mainCoordinator as? MainCoordinator<MainCoordinatorRouter>
+            self.appCoordinator = appCoordinator as? AppCoordinator<AppRouter>
             self.authManager = authManager
             self.tabBarController = .init()
             super.init(navigationController: navigationController, startingRoute: .home)
@@ -64,6 +64,6 @@ class TabBarCoordinator<Router: NavigationRouter>: Coordinator<TabBarRouter> {
     }
     
     func goToAuthenticationFlow() {
-        mainCoordinator?.showLoginFlow()
+        appCoordinator?.showLoginFlow()
     }
 }

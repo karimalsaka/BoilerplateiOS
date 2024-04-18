@@ -7,7 +7,7 @@ class AppDelegate: NSObject, UIApplicationDelegate {
     FirebaseApp.configure()
       
     let navigationController = UINavigationController()
-    let coordinator = MainCoordinator<MainCoordinatorRouter>(navigationController: navigationController)
+    let coordinator = AppCoordinator<AppRouter>(navigationController: navigationController)
       
     coordinator.start()
     

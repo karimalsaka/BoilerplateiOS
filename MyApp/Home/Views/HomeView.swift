@@ -1,9 +1,5 @@
 import SwiftUI
 
-final class HomeViewModel: ObservableObject {
-    
-}
-
 struct HomeView: View {
     @EnvironmentObject var coordinator: HomeFlowCoordinator<HomeFlowRouter>
     @StateObject private var viewModel: HomeViewModel

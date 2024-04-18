@@ -1,24 +1,5 @@
 import SwiftUI
 
-@MainActor
-final class ResetPasswordViewModel: ObservableObject {
-    @Published var email = ""
-    
-    private var authManager: AuthManager
-
-    init(authManager: AuthManager) {
-        self.authManager = authManager
-    }
-
-    func resetPassword() async throws {
-        guard !email.isEmpty else {
-            return
-        }
-        
-        try await authManager.resetPassword(email: email)
-    }
-}
-
 struct ResetPasswordView: View {
     @EnvironmentObject var coordinator: AuthenticationFlowCoordinator<AuthenticationFlowRouter>
     @StateObject private var viewModel: ResetPasswordViewModel

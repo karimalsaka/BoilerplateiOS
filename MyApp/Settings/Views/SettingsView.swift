@@ -1,17 +1,5 @@
 import SwiftUI
 
-final class SettingsViewModel: ObservableObject {
-    var authManager: AuthManager
-
-    init(authManager: AuthManager) {
-        self.authManager = authManager
-    }
-    
-    func signOut() throws {
-        try authManager.signOut()
-    }
-}
-
 struct SettingsView: View {
     @EnvironmentObject var coordinator: SettingsFlowCoordinator<SettingsFlowRouter>
     @StateObject private var viewModel: SettingsViewModel

@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		99297BC32BD11A480027169D /* AuthenticationOptionsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99297BC22BD11A480027169D /* AuthenticationOptionsViewModel.swift */; };
+		99297BC52BD11A7F0027169D /* SignInWithEmailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99297BC42BD11A7F0027169D /* SignInWithEmailViewModel.swift */; };
+		99297BC72BD11A980027169D /* SignUpWithEmailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99297BC62BD11A980027169D /* SignUpWithEmailViewModel.swift */; };
+		99297BC92BD11AD00027169D /* ResetPasswordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99297BC82BD11AD00027169D /* ResetPasswordViewModel.swift */; };
+		99297BCD2BD11B040027169D /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99297BCC2BD11B040027169D /* HomeViewModel.swift */; };
+		99297BD12BD11B360027169D /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99297BD02BD11B360027169D /* SettingsViewModel.swift */; };
+		99297BD32BD11B570027169D /* ManageAccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99297BD22BD11B570027169D /* ManageAccountViewModel.swift */; };
 		99388F7F2BC935BC008342BD /* MyAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99388F7E2BC935BC008342BD /* MyAppApp.swift */; };
 		99388F832BC935BD008342BD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 99388F822BC935BD008342BD /* Assets.xcassets */; };
 		99388F862BC935BD008342BD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 99388F852BC935BD008342BD /* Preview Assets.xcassets */; };
@@ -49,8 +56,8 @@
 		99388FDC2BCA9651008342BD /* NavigationRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99388FDB2BCA9651008342BD /* NavigationRouter.swift */; };
 		99388FDF2BCA96DD008342BD /* TabbarCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99388FDE2BCA96DD008342BD /* TabbarCoordinator.swift */; };
 		99388FE12BCA96EA008342BD /* TabbarRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99388FE02BCA96EA008342BD /* TabbarRouter.swift */; };
-		99388FE32BCA993A008342BD /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99388FE22BCA993A008342BD /* MainCoordinator.swift */; };
-		99388FE72BCA9BED008342BD /* MainCoordinatorRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99388FE62BCA9BED008342BD /* MainCoordinatorRouter.swift */; };
+		99388FE32BCA993A008342BD /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99388FE22BCA993A008342BD /* AppCoordinator.swift */; };
+		99388FE72BCA9BED008342BD /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99388FE62BCA9BED008342BD /* AppRouter.swift */; };
 		99388FEC2BCAA25A008342BD /* HomeFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99388FEB2BCA9DCD008342BD /* HomeFlowCoordinator.swift */; };
 		99388FED2BCAA25C008342BD /* HomeFlowRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99388FEA2BCA9DCD008342BD /* HomeFlowRouter.swift */; };
 		997BB8C42BCE8B1F008BAD90 /* AuthenticationFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 997BB8C32BCE8B1F008BAD90 /* AuthenticationFlowCoordinator.swift */; };
@@ -62,6 +69,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		99297BC22BD11A480027169D /* AuthenticationOptionsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationOptionsViewModel.swift; sourceTree = "<group>"; };
+		99297BC42BD11A7F0027169D /* SignInWithEmailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInWithEmailViewModel.swift; sourceTree = "<group>"; };
+		99297BC62BD11A980027169D /* SignUpWithEmailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpWithEmailViewModel.swift; sourceTree = "<group>"; };
+		99297BC82BD11AD00027169D /* ResetPasswordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordViewModel.swift; sourceTree = "<group>"; };
+		99297BCC2BD11B040027169D /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		99297BD02BD11B360027169D /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
+		99297BD22BD11B570027169D /* ManageAccountViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageAccountViewModel.swift; sourceTree = "<group>"; };
 		99388F7B2BC935BC008342BD /* MyApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		99388F7E2BC935BC008342BD /* MyAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAppApp.swift; sourceTree = "<group>"; };
 		99388F822BC935BD008342BD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -78,8 +92,8 @@
 		99388FDB2BCA9651008342BD /* NavigationRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationRouter.swift; sourceTree = "<group>"; };
 		99388FDE2BCA96DD008342BD /* TabbarCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarCoordinator.swift; sourceTree = "<group>"; };
 		99388FE02BCA96EA008342BD /* TabbarRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarRouter.swift; sourceTree = "<group>"; };
-		99388FE22BCA993A008342BD /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
-		99388FE62BCA9BED008342BD /* MainCoordinatorRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinatorRouter.swift; sourceTree = "<group>"; };
+		99388FE22BCA993A008342BD /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		99388FE62BCA9BED008342BD /* AppRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRouter.swift; sourceTree = "<group>"; };
 		99388FEA2BCA9DCD008342BD /* HomeFlowRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeFlowRouter.swift; sourceTree = "<group>"; };
 		99388FEB2BCA9DCD008342BD /* HomeFlowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeFlowCoordinator.swift; sourceTree = "<group>"; };
 		997BB8C32BCE8B1F008BAD90 /* AuthenticationFlowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationFlowCoordinator.swift; sourceTree = "<group>"; };
@@ -129,6 +143,51 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		99297BC12BD11A3B0027169D /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				99297BC22BD11A480027169D /* AuthenticationOptionsViewModel.swift */,
+				99297BC42BD11A7F0027169D /* SignInWithEmailViewModel.swift */,
+				99297BC62BD11A980027169D /* SignUpWithEmailViewModel.swift */,
+				99297BC82BD11AD00027169D /* ResetPasswordViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		99297BCA2BD11AF40027169D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				99388FD22BC94C10008342BD /* HomeView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		99297BCB2BD11AFA0027169D /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				99297BCC2BD11B040027169D /* HomeViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		99297BCE2BD11B270027169D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				997BB8C82BCE91DE008BAD90 /* SettingsView.swift */,
+				997BB8CF2BD02493008BAD90 /* ManageAccountView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		99297BCF2BD11B2C0027169D /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				99297BD02BD11B360027169D /* SettingsViewModel.swift */,
+				99297BD22BD11B570027169D /* ManageAccountViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
 		99388F722BC935BC008342BD = {
 			isa = PBXGroup;
 			children = (
@@ -176,6 +235,7 @@
 			children = (
 				997BB8C52BCE8B26008BAD90 /* Coordinator */,
 				99388FCC2BC94254008342BD /* Views */,
+				99297BC12BD11A3B0027169D /* ViewModels */,
 				99388FCD2BC94261008342BD /* AuthManager.swift */,
 			);
 			path = Authentication;
@@ -196,7 +256,8 @@
 			isa = PBXGroup;
 			children = (
 				99388FE92BCA9DC2008342BD /* Coordinator */,
-				99388FD22BC94C10008342BD /* HomeView.swift */,
+				99297BCA2BD11AF40027169D /* Views */,
+				99297BCB2BD11AFA0027169D /* ViewModels */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -205,8 +266,8 @@
 			isa = PBXGroup;
 			children = (
 				99388FDD2BCA96BA008342BD /* Coordinator */,
-				99388FE22BCA993A008342BD /* MainCoordinator.swift */,
-				99388FE62BCA9BED008342BD /* MainCoordinatorRouter.swift */,
+				99388FE22BCA993A008342BD /* AppCoordinator.swift */,
+				99388FE62BCA9BED008342BD /* AppRouter.swift */,
 			);
 			path = Navigation;
 			sourceTree = "<group>";
@@ -258,8 +319,8 @@
 			isa = PBXGroup;
 			children = (
 				997BB8CA2BCE9228008BAD90 /* Coordinator */,
-				997BB8C82BCE91DE008BAD90 /* SettingsView.swift */,
-				997BB8CF2BD02493008BAD90 /* ManageAccountView.swift */,
+				99297BCE2BD11B270027169D /* Views */,
+				99297BCF2BD11B2C0027169D /* ViewModels */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -387,11 +448,15 @@
 			files = (
 				997BB8C72BCE8B2B008BAD90 /* AuthenticationFlowRouter.swift in Sources */,
 				99388FC62BC93D3A008342BD /* AppDelegate.swift in Sources */,
-				99388FE32BCA993A008342BD /* MainCoordinator.swift in Sources */,
+				99388FE32BCA993A008342BD /* AppCoordinator.swift in Sources */,
+				99297BC52BD11A7F0027169D /* SignInWithEmailViewModel.swift in Sources */,
 				99388FD32BC94C10008342BD /* HomeView.swift in Sources */,
 				99388FDA2BCA963E008342BD /* Coordinator.swift in Sources */,
 				997BB8CD2BCE9229008BAD90 /* SettingsFlowCoordinator.swift in Sources */,
 				99388FCE2BC94261008342BD /* AuthManager.swift in Sources */,
+				99297BC32BD11A480027169D /* AuthenticationOptionsViewModel.swift in Sources */,
+				99297BC92BD11AD00027169D /* ResetPasswordViewModel.swift in Sources */,
+				99297BCD2BD11B040027169D /* HomeViewModel.swift in Sources */,
 				99388FD52BC98D05008342BD /* SignUpWithEmailView.swift in Sources */,
 				99388FDC2BCA9651008342BD /* NavigationRouter.swift in Sources */,
 				99388FC92BC93FDC008342BD /* SignInWithEmailView.swift in Sources */,
@@ -401,12 +466,15 @@
 				997BB8C92BCE91EC008BAD90 /* SettingsView.swift in Sources */,
 				997BB8D02BD02494008BAD90 /* ManageAccountView.swift in Sources */,
 				99388FD72BC9902E008342BD /* ResetPasswordView.swift in Sources */,
-				99388FE72BCA9BED008342BD /* MainCoordinatorRouter.swift in Sources */,
+				99388FE72BCA9BED008342BD /* AppRouter.swift in Sources */,
 				99388FDF2BCA96DD008342BD /* TabbarCoordinator.swift in Sources */,
 				99388FEC2BCAA25A008342BD /* HomeFlowCoordinator.swift in Sources */,
 				99388FE12BCA96EA008342BD /* TabbarRouter.swift in Sources */,
+				99297BC72BD11A980027169D /* SignUpWithEmailViewModel.swift in Sources */,
 				99388FCB2BC94143008342BD /* AuthenticationOptionsView.swift in Sources */,
 				997BB8CE2BCE9229008BAD90 /* SettingsFlowRouter.swift in Sources */,
+				99297BD12BD11B360027169D /* SettingsViewModel.swift in Sources */,
+				99297BD32BD11B570027169D /* ManageAccountViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

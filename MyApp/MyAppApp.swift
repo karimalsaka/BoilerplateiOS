@@ -15,7 +15,7 @@ struct MyAppApp: App {
 struct NavigationController: UIViewControllerRepresentable {
     func makeUIViewController(context: Context) -> UINavigationController {
         let navigationController = UINavigationController()
-        let coordinator = MainCoordinator<MainCoordinatorRouter>(navigationController: navigationController)
+        let coordinator = AppCoordinator<AppRouter>(navigationController: navigationController)
         
         coordinator.start()
         return coordinator.navigationController
