@@ -2,19 +2,23 @@ import Foundation
 import SwiftUI
 
 class TabBarCoordinator<Router: NavigationRouter>: Coordinator<TabBarRouter> {
+    var appCoordinator: AppCoordinator<AppRouter>?
     var tabBarController: UITabBarController
     var authManager: AuthManager
-    var appCoordinator: AppCoordinator<AppRouter>?
+    var userManager: UserManager
     
     init(
         navigationController: UINavigationController = .init(),
         appCoordinator: Coordinator<AppRouter>,
         authManager: AuthManager,
-        startingRoute: TabBarRouter? = nil) {
-            self.appCoordinator = appCoordinator as? AppCoordinator<AppRouter>
-            self.authManager = authManager
-            self.tabBarController = .init()
-            super.init(navigationController: navigationController, startingRoute: .home)
+        userManager: UserManager,
+        startingRoute: TabBarRouter? = nil
+    ) {
+        self.appCoordinator = appCoordinator as? AppCoordinator<AppRouter>
+        self.authManager = authManager
+        self.userManager = userManager
+        self.tabBarController = .init()
+        super.init(navigationController: navigationController, startingRoute: .home)
     }
     
     public override func start() {
@@ -53,7 +57,12 @@ class TabBarCoordinator<Router: NavigationRouter>: Coordinator<TabBarRouter> {
             let coordinator = HomeFlowCoordinator<HomeFlowRouter>(navigationController: navController, startingRoute: .home, tabbarCoordinator: self)
             coordinator.start()
         case .settings:
-            let coordinator = SettingsFlowCoordinator<SettingsFlowRouter>(navigationController: navController, tabbarCoordinator: self, authManager: authManager)
+            let coordinator = SettingsFlowCoordinator<SettingsFlowRouter>(
+                navigationController: navController,
+                tabbarCoordinator: self,
+                authManager: authManager,
+                userManager: userManager
+            )
             coordinator.start()
         }
         return navController

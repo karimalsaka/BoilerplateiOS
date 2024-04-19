@@ -48,6 +48,11 @@ struct SignInWithEmailView: View {
 
 #Preview {
     let authManger = AuthManager()
-    let viewModel = SignInWithEmailViewModel(authManager: authManger)
+    let userManager = UserManager()
+
+    let viewModel = SignInWithEmailViewModel(
+        authManager: authManger,
+        userManager: userManager
+    )
     return SignInWithEmailView(viewModel: viewModel)
 }

@@ -6,9 +6,11 @@ final class SignInWithEmailViewModel: ObservableObject {
     @Published var password = ""
 
     private var authManager: AuthManager
+    private var userManager: UserManager
 
-    init(authManager: AuthManager) {
+    init(authManager: AuthManager, userManager: UserManager) {
         self.authManager = authManager
+        self.userManager = userManager
     }
 
     func signIn() async throws {

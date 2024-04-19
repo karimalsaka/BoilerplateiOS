@@ -23,7 +23,7 @@ struct AuthenticationOptionsView: View {
                      Spacer()
 
                     Button {
-                        coordinator.show(.signUpWithEmail(authManager: viewModel.authManager))
+                        coordinator.show(.signUpWithEmail(authManager: viewModel.authManager, userManager: viewModel.userManager))
                     } label: {
                         Text("Sign Up with Email")
                             .font(.headline)
@@ -35,7 +35,7 @@ struct AuthenticationOptionsView: View {
                     }
 
                     Button {
-                        coordinator.show(.signInWithEmail(authManager: viewModel.authManager))
+                        coordinator.show(.signInWithEmail(authManager: viewModel.authManager, userManager: viewModel.userManager))
                     } label: {
                         Text("Sign In with Email")
                             .font(.headline)
@@ -81,7 +81,12 @@ struct AuthenticationOptionsView: View {
 
 #Preview {
     let authManager = AuthManager()
-    let viewModel = AuthenticationOptionsViewModel(authManager: authManager)
+    let userManager = UserManager()
+    
+    let viewModel = AuthenticationOptionsViewModel(
+        authManager: authManager,
+        userManager: userManager
+    )
 
     return AuthenticationOptionsView(viewModel: viewModel)
 }

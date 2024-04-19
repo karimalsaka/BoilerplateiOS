@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		99283C012BD2819E002959F0 /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99283C002BD2819E002959F0 /* UserManager.swift */; };
 		99297BC32BD11A480027169D /* AuthenticationOptionsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99297BC22BD11A480027169D /* AuthenticationOptionsViewModel.swift */; };
 		99297BC52BD11A7F0027169D /* SignInWithEmailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99297BC42BD11A7F0027169D /* SignInWithEmailViewModel.swift */; };
 		99297BC72BD11A980027169D /* SignUpWithEmailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99297BC62BD11A980027169D /* SignUpWithEmailViewModel.swift */; };
@@ -69,6 +70,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		99283C002BD2819E002959F0 /* UserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
 		99297BC22BD11A480027169D /* AuthenticationOptionsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationOptionsViewModel.swift; sourceTree = "<group>"; };
 		99297BC42BD11A7F0027169D /* SignInWithEmailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInWithEmailViewModel.swift; sourceTree = "<group>"; };
 		99297BC62BD11A980027169D /* SignUpWithEmailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpWithEmailViewModel.swift; sourceTree = "<group>"; };
@@ -143,6 +145,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		99283BFF2BD28170002959F0 /* FirestoreDatabase */ = {
+			isa = PBXGroup;
+			children = (
+				99283C002BD2819E002959F0 /* UserManager.swift */,
+			);
+			path = FirestoreDatabase;
+			sourceTree = "<group>";
+		};
 		99297BC12BD11A3B0027169D /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
@@ -210,6 +220,7 @@
 				997BB8D12BD04943008BAD90 /* MyApp.entitlements */,
 				99388F7E2BC935BC008342BD /* MyAppApp.swift */,
 				99388FC52BC93D3A008342BD /* AppDelegate.swift */,
+				99283BFF2BD28170002959F0 /* FirestoreDatabase */,
 				99388FD82BCA95B5008342BD /* Navigation */,
 				99388FC72BC93FCF008342BD /* Authentication */,
 				99388FE52BCA9BD8008342BD /* Tabbar */,
@@ -464,6 +475,7 @@
 				99388FED2BCAA25C008342BD /* HomeFlowRouter.swift in Sources */,
 				99388F7F2BC935BC008342BD /* MyAppApp.swift in Sources */,
 				997BB8C92BCE91EC008BAD90 /* SettingsView.swift in Sources */,
+				99283C012BD2819E002959F0 /* UserManager.swift in Sources */,
 				997BB8D02BD02494008BAD90 /* ManageAccountView.swift in Sources */,
 				99388FD72BC9902E008342BD /* ResetPasswordView.swift in Sources */,
 				99388FE72BCA9BED008342BD /* AppRouter.swift in Sources */,

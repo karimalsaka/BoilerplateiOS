@@ -10,9 +10,14 @@ struct SettingsView: View {
     init(viewModel: SettingsViewModel) {
         self._viewModel = StateObject(wrappedValue: viewModel)
     }
-    
+
     var body: some View {
         VStack {
+            if let user = viewModel.user {
+                Text("Welcome \(user.email ?? "")!")
+                    .font(.subheadline)
+            }
+            
             List {
                 Section(header: Text("Notifications")) {
                     Toggle("Enable Notifications", isOn: $notificationsEnabled)
@@ -72,6 +77,6 @@ struct SettingsView: View {
 }
 
 #Preview {
-    let viewModel = SettingsViewModel(authManager: AuthManager())
+    let viewModel = SettingsViewModel(authManager: AuthManager(), userManager: UserManager())
     return SettingsView(viewModel: viewModel)
 }

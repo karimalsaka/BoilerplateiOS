@@ -3,9 +3,14 @@ import UIKit
 class AuthenticationFlowCoordinator<Router: NavigationRouter>: Coordinator<AuthenticationFlowRouter> {
     private let appCoordinator: AppCoordinator<AppRouter>?
     
-    init(navigationController: UINavigationController = .init(), appCoordinator: Coordinator<AppRouter>, authManager: AuthManager, startingRoute: AuthenticationFlowRouter? = nil) {
+    init(
+        navigationController: UINavigationController = .init(),
+        appCoordinator: Coordinator<AppRouter>,
+        authManager: AuthManager,
+        userManager: UserManager,
+        startingRoute: AuthenticationFlowRouter? = nil) {
         self.appCoordinator = appCoordinator as? AppCoordinator<AppRouter>
-        super.init(navigationController: navigationController, startingRoute: .authenticationOptionsView(authManager: authManager))
+        super.init(navigationController: navigationController, startingRoute: .authenticationOptionsView(authManager: authManager, userManager: userManager))
     }
     
     // Override the base Coordinator's show() function because the environmentObject needs to be of type AuthenticationFlowCoordinator and not BaseCoordinator

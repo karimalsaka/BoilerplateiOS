@@ -1,7 +1,7 @@
 import SwiftUI
 
 enum SettingsFlowRouter: NavigationRouter, Equatable {
-    case settings(authManager: AuthManager)
+    case settings(authManager: AuthManager, userManager: UserManager)
     case accountSettings
         
     var transition: NavigationTranisitionStyle {
@@ -11,8 +11,8 @@ enum SettingsFlowRouter: NavigationRouter, Equatable {
     @MainActor @ViewBuilder
     func view() -> some View {
         switch self {
-        case .settings(let authManager):
-            let viewModel = SettingsViewModel(authManager: authManager)
+        case .settings(let authManager, let userManager):
+            let viewModel = SettingsViewModel(authManager: authManager, userManager: userManager)
             SettingsView(viewModel: viewModel)
         case .accountSettings:
             let viewModel = ManageAccountViewModel()

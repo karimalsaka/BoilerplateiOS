@@ -5,13 +5,15 @@ import CryptoKit
 @MainActor
 final class AuthenticationOptionsViewModel:NSObject, ObservableObject {
     var authManager: AuthManager
-    var didSignInWithAppleSuccessfully = false
+    var userManager: UserManager
 
+    var didSignInWithAppleSuccessfully = false
     private var currentNonce: String?
     private var presentationAnchor: ASPresentationAnchor?
 
-    init(authManager: AuthManager) {
+    init(authManager: AuthManager, userManager: UserManager) {
         self.authManager = authManager
+        self.userManager = userManager
     }
     
     func startSignInWithAppleFlow(presentationAnchor: ASPresentationAnchor?) {
