@@ -7,7 +7,7 @@ final class AuthenticationOptionsViewModel:NSObject, ObservableObject {
     var authManager: AuthManager
     var userManager: UserManager
 
-    var didSignInWithAppleSuccessfully = false
+    @Published var didSignInWithAppleSuccessfully = false
     private var currentNonce: String?
     private var presentationAnchor: ASPresentationAnchor?
 
@@ -56,7 +56,8 @@ extension AuthenticationOptionsViewModel: ASAuthorizationControllerDelegate {
         let tokens = SignInWithAppleResult(token: idTokenString, nonce: nonce)
         
         Task {
-            try await authManager.signInWithApple(tokens: tokens)
+            let authDataResult = try await authManager.signInWithApple(tokens: tokens)
+            try await userManager.createNewUser(auth: authDataResult)
             didSignInWithAppleSuccessfully = true
         }
     }

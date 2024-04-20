@@ -71,7 +71,7 @@ struct AuthenticationOptionsView: View {
             }
             .padding()
             .frame(maxWidth: .infinity, maxHeight: .infinity)
-            .onChange(of: viewModel.didSignInWithAppleSuccessfully) { success in
+            .onChange(of: viewModel.didSignInWithAppleSuccessfully) { _, success in
                 if success {
                     coordinator.userSignedIn()
                 }

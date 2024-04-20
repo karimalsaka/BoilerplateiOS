@@ -69,7 +69,7 @@ struct SignInWithAppleResult {
 extension AuthManager {
     static func == (lhs: AuthManager, rhs: AuthManager) -> Bool {
         
-        // UserManager doesn't have any meaningful properties
+        // AuthManager doesn't have any meaningful properties
         // to compare, you we can just return true
         return true
     }

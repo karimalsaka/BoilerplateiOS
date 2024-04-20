@@ -244,10 +244,10 @@
 		99388FC72BC93FCF008342BD /* Authentication */ = {
 			isa = PBXGroup;
 			children = (
+				99388FCD2BC94261008342BD /* AuthManager.swift */,
 				997BB8C52BCE8B26008BAD90 /* Coordinator */,
 				99388FCC2BC94254008342BD /* Views */,
 				99297BC12BD11A3B0027169D /* ViewModels */,
-				99388FCD2BC94261008342BD /* AuthManager.swift */,
 			);
 			path = Authentication;
 			sourceTree = "<group>";
