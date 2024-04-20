@@ -19,7 +19,9 @@ struct HomeView: View {
             .padding()
             .navigationTitle("Home")
             .frame(maxWidth: .infinity, maxHeight: .infinity)
-        }
+         }.onAppear {
+             coordinator.showATTPermissionsAlert()
+         }
     }
 }
 

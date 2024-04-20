@@ -62,6 +62,7 @@
 		99388FEC2BCAA25A008342BD /* HomeFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99388FEB2BCA9DCD008342BD /* HomeFlowCoordinator.swift */; };
 		99388FED2BCAA25C008342BD /* HomeFlowRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99388FEA2BCA9DCD008342BD /* HomeFlowRouter.swift */; };
 		9938B0A52BD3F71000D448B0 /* Coordinator+UIAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9938B0A42BD3F71000D448B0 /* Coordinator+UIAlert.swift */; };
+		9938B0A72BD43B1600D448B0 /* Coordinator+AppTrackingTransparency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9938B0A62BD43B1500D448B0 /* Coordinator+AppTrackingTransparency.swift */; };
 		997BB8C42BCE8B1F008BAD90 /* AuthenticationFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 997BB8C32BCE8B1F008BAD90 /* AuthenticationFlowCoordinator.swift */; };
 		997BB8C72BCE8B2B008BAD90 /* AuthenticationFlowRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 997BB8C62BCE8B2B008BAD90 /* AuthenticationFlowRouter.swift */; };
 		997BB8C92BCE91EC008BAD90 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 997BB8C82BCE91DE008BAD90 /* SettingsView.swift */; };
@@ -100,6 +101,7 @@
 		99388FEA2BCA9DCD008342BD /* HomeFlowRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeFlowRouter.swift; sourceTree = "<group>"; };
 		99388FEB2BCA9DCD008342BD /* HomeFlowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeFlowCoordinator.swift; sourceTree = "<group>"; };
 		9938B0A42BD3F71000D448B0 /* Coordinator+UIAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Coordinator+UIAlert.swift"; sourceTree = "<group>"; };
+		9938B0A62BD43B1500D448B0 /* Coordinator+AppTrackingTransparency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Coordinator+AppTrackingTransparency.swift"; sourceTree = "<group>"; };
 		997BB8C32BCE8B1F008BAD90 /* AuthenticationFlowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationFlowCoordinator.swift; sourceTree = "<group>"; };
 		997BB8C62BCE8B2B008BAD90 /* AuthenticationFlowRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationFlowRouter.swift; sourceTree = "<group>"; };
 		997BB8C82BCE91DE008BAD90 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
@@ -343,6 +345,7 @@
 			isa = PBXGroup;
 			children = (
 				9938B0A42BD3F71000D448B0 /* Coordinator+UIAlert.swift */,
+				9938B0A62BD43B1500D448B0 /* Coordinator+AppTrackingTransparency.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -493,6 +496,7 @@
 				99388FDF2BCA96DD008342BD /* TabbarCoordinator.swift in Sources */,
 				99388FEC2BCAA25A008342BD /* HomeFlowCoordinator.swift in Sources */,
 				99388FE12BCA96EA008342BD /* TabbarRouter.swift in Sources */,
+				9938B0A72BD43B1600D448B0 /* Coordinator+AppTrackingTransparency.swift in Sources */,
 				9938B0A52BD3F71000D448B0 /* Coordinator+UIAlert.swift in Sources */,
 				99297BC72BD11A980027169D /* SignUpWithEmailViewModel.swift in Sources */,
 				99388FCB2BC94143008342BD /* AuthenticationOptionsView.swift in Sources */,
@@ -636,6 +640,7 @@
 				DEVELOPMENT_TEAM = BLYH847VK6;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSUserTrackingUsageDescription = "Would you like to get personalised ads?";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -666,6 +671,7 @@
 				DEVELOPMENT_TEAM = BLYH847VK6;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSUserTrackingUsageDescription = "Would you like to get personalised ads?";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
