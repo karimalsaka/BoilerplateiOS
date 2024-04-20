@@ -8,15 +8,15 @@ struct SignInWithEmailView: View {
         self._viewModel = StateObject(wrappedValue: viewModel)
     }
     var body: some View {
-        VStack {
+        VStack(alignment: .leading) {
             TextField("Email", text: $viewModel.email)
                 .padding()
-                .background(Color.gray.opacity(0.3))
+                .background(Color.gray.opacity(0.1))
                 .cornerRadius(10)
             
             SecureField("Password", text: $viewModel.password)
                 .padding()
-                .background(Color.gray.opacity(0.3))
+                .background(Color.gray.opacity(0.1))
                 .cornerRadius(10)
             
             Button {
@@ -25,8 +25,7 @@ struct SignInWithEmailView: View {
                         try await viewModel.signIn()
                         coordinator.userSignedIn()
                     } catch {
-                        //MARK: show error alert to user
-                        print("failed to sign in with error \(error)")
+                        coordinator.showErrorAlert("Failed to sign in with error: \n \(error.localizedDescription)")
                     }
                 }
                 
@@ -37,7 +36,26 @@ struct SignInWithEmailView: View {
                     .frame(height: 55)
                     .frame(maxWidth: .infinity)
                     .background(Color.cyan)
-                    .cornerRadius(10)
+                    .cornerRadius(5)
+            }
+            .padding(.bottom, 20)
+            
+            Text("Forgot password?")
+                .padding(.bottom, 5)
+            
+            Button {
+                coordinator.show(.resetPassword(authManager: viewModel.authManager))
+            } label: {
+                Text("Reset my password")
+                    .font(.headline)
+                    .tint(.blue)
+                    .foregroundStyle(Color.cyan)
+                    .frame(height: 55)
+                    .frame(maxWidth: .infinity)
+                    .overlay(
+                        RoundedRectangle(cornerRadius: 5)
+                            .stroke(Color.cyan, lineWidth: 1)
+                )
             }
         }
         .padding()

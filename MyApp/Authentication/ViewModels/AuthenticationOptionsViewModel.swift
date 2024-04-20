@@ -8,6 +8,7 @@ final class AuthenticationOptionsViewModel:NSObject, ObservableObject {
     var userManager: UserManager
 
     @Published var didSignInWithAppleSuccessfully = false
+    var appleSignInError: URLError? = nil
     private var currentNonce: String?
     private var presentationAnchor: ASPresentationAnchor?
 
@@ -49,7 +50,7 @@ extension AuthenticationOptionsViewModel: ASAuthorizationControllerDelegate {
               let appleIDToken = appleIDCredential.identityToken,
               let idTokenString = String(data: appleIDToken, encoding: .utf8),
               let nonce = currentNonce else {
-            print("error")
+            appleSignInError = URLError(.badURL)
             return
         }
         
@@ -63,8 +64,8 @@ extension AuthenticationOptionsViewModel: ASAuthorizationControllerDelegate {
     }
 
     func authorizationController(controller: ASAuthorizationController, didCompleteWithError error: Error) {
-        // Handle error.
-        print("Sign in with Apple errored: \(error)")
+        appleSignInError = URLError(.badURL)
+        didSignInWithAppleSuccessfully = false
     }
 
     //MARK: - Helper functions

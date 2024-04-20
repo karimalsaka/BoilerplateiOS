@@ -11,27 +11,28 @@ struct AuthenticationOptionsView: View {
     
     var body: some View {
             ScrollView {
-                VStack(alignment: .leading, spacing: 10) {
+                VStack(alignment: .center, spacing: 10) {
                     
-                    // replace with image lol
+                    // replace with image
                     Rectangle()
                         .frame(height: 300)
                         .foregroundStyle(Color.cyan)
-                        .clipShape(RoundedRectangle(cornerRadius: 20))
+                        .clipShape(RoundedRectangle(cornerRadius: 10))
                         .padding(.top, 30)
-                        .padding(.bottom, 50)
-                     Spacer()
+                        .padding(.bottom, 15)
+
+                    Text("Build you million dollar idea in days")
+                        .multilineTextAlignment(.center)
+                        .font(.title)
+                        .fontWeight(.bold)
+                        .padding(.bottom, 30)
 
                     Button {
-                        coordinator.show(.signUpWithEmail(authManager: viewModel.authManager, userManager: viewModel.userManager))
+                        viewModel.startSignInWithAppleFlow(presentationAnchor: coordinator.navigationController.topViewController?.view.window)
                     } label: {
-                        Text("Sign Up with Email")
-                            .font(.headline)
-                            .foregroundStyle(Color.white)
+                        AppleButtonView(type: .continue, style: .black)
+                            .allowsHitTesting(false)
                             .frame(height: 55)
-                            .frame(maxWidth: .infinity)
-                            .background(Color.cyan)
-                            .cornerRadius(10)
                     }
 
                     Button {
@@ -43,29 +44,25 @@ struct AuthenticationOptionsView: View {
                             .frame(height: 55)
                             .frame(maxWidth: .infinity)
                             .background(Color.cyan)
-                            .cornerRadius(10)
+                            .cornerRadius(5)
                     }
                     
+                    Text("or")
+                        .font(.system(size: 15, weight: .regular))
+                        .padding(.vertical, 5)
+                    
                     Button {
-                        coordinator.show(.resetPassword(authManager: viewModel.authManager))
+                        coordinator.show(.signUpWithEmail(authManager: viewModel.authManager, userManager: viewModel.userManager))
                     } label: {
-                        Text("Forgot Password?")
+                        Text("Sign Up with Email")
                             .font(.headline)
                             .foregroundStyle(Color.white)
                             .frame(height: 55)
                             .frame(maxWidth: .infinity)
-                            .background(Color.red)
-                            .cornerRadius(10)
+                            .background(Color.cyan)
+                            .cornerRadius(5)
                     }
                      
-                    Button {
-                        viewModel.startSignInWithAppleFlow(presentationAnchor: coordinator.navigationController.topViewController?.view.window)
-                    } label: {
-                        AppleButtonView(type: .continue, style: .black)
-                            .allowsHitTesting(false)
-                            .frame(height: 55)
-                    }
-                    
                      Spacer()
                 }
             }
