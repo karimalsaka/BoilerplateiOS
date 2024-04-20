@@ -3,6 +3,13 @@ import AuthenticationServices
 import FirebaseAuth
 import CryptoKit
 
+enum AuthError: Error {
+    case signUpError
+    case signInError
+    case signOutError
+    case resetPasswordError
+}
+
 struct AuthUserModel {
     let id: String
     let email: String?
@@ -44,7 +51,7 @@ final class AuthManager: NSObject {
         do {
             try Auth.auth().signOut()
         } catch {
-            throw URLError(.unknown)
+            throw AuthError.signOutError
         }
     }
     

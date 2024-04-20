@@ -12,7 +12,7 @@ final class ResetPasswordViewModel: ObservableObject {
 
     func resetPassword() async throws {
         guard !email.isEmpty else {
-            return
+            throw AuthError.resetPasswordError
         }
         
         try await authManager.resetPassword(email: email)

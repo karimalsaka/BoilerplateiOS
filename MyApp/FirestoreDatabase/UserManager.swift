@@ -7,6 +7,10 @@ struct DBUser {
     var date_created: Date?
 }
 
+enum DBError: Error {
+    case connectionError
+}
+
 final class UserManager {
     let database = Firestore.firestore()
     
@@ -27,7 +31,7 @@ final class UserManager {
         let snapshot = try await database.collection("users").document(userId).getDocument()
         
         guard let data = snapshot.data(), let userId = data["user_id"] as? String else {
-            throw URLError(.unknown)
+            throw DBError.connectionError
         }
         
 

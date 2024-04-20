@@ -20,7 +20,7 @@ final class SettingsViewModel: ObservableObject {
     
     func loadUserInfo() async throws {
         guard let userId = authManager.signedInUserId() else {
-            return
+            throw AuthError.signInError
         }
         
         self.user = try await userManager.getUser(userId: userId)

@@ -15,7 +15,7 @@ final class SignUpWithEmailViewModel: ObservableObject {
 
     func signUp() async throws {
         guard !email.isEmpty, !password.isEmpty else {
-            throw URLError(.badURL)
+            throw AuthError.signUpError
         }
         let authDataResult = try await authManager.createUser(email: email, password: password)
         try await userManager.createNewUser(auth: authDataResult)

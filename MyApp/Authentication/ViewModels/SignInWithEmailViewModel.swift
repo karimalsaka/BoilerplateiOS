@@ -15,7 +15,7 @@ final class SignInWithEmailViewModel: ObservableObject {
 
     func signIn() async throws {
         guard !email.isEmpty, !password.isEmpty else {
-            throw URLError(.badURL)
+            throw AuthError.signInError
         }
         
         try await authManager.signIn(email: email, password: password)
