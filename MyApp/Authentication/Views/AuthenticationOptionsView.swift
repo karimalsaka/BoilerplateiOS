@@ -73,6 +73,11 @@ struct AuthenticationOptionsView: View {
                     coordinator.userSignedIn()
                 }
             }
+            .onChange(of: viewModel.appleSignInError) { _, error in
+                guard let error else { return }
+                                
+                coordinator.showErrorAlert("Failed to sign in with error: \n \(error.localizedDescription)")
+            }
     }
 }
 
