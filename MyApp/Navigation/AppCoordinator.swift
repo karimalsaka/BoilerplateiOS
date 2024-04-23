@@ -14,6 +14,9 @@ class AppCoordinator<Router: NavigationRouter>: Coordinator<AppRouter> {
     
     public override func start() {
         if authManager.isUserSignedIn() {
+            Task {
+                await PurchasesManager.shared.refreshSubscriptionStatus()
+            }
             showMainAppFlow()
         } else {
             showLoginFlow()

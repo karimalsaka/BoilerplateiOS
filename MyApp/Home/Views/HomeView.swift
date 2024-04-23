@@ -1,4 +1,5 @@
 import SwiftUI
+import RevenueCatUI
 
 struct HomeView: View {
     @EnvironmentObject var coordinator: HomeFlowCoordinator<HomeFlowRouter>
@@ -22,6 +23,13 @@ struct HomeView: View {
          }.onAppear {
              coordinator.showATTPermissionsAlert()
          }
+         .presentPaywallIfNeeded(
+            requiredEntitlementIdentifier: "premium",
+            purchaseFailure: { error in
+                print("purchase failed with error \(error.localizedDescription)")
+                
+            }        
+         )
     }
 }
 

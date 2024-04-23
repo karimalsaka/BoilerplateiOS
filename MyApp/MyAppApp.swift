@@ -1,9 +1,13 @@
 import SwiftUI
+import RevenueCat
 
 @main
 struct MyAppApp: App {
     @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
-    
+    init() {
+        Purchases.configure(withAPIKey: "appl_qtHpVUsFnvarJzcXiNXRrWQZjDb")
+    }
+
     var body: some Scene {
         WindowGroup {
             NavigationController()

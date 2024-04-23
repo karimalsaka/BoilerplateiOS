@@ -2,6 +2,7 @@ import Foundation
 import AuthenticationServices
 import FirebaseAuth
 import CryptoKit
+import RevenueCat
 
 enum AuthError: Error {
     case signUpError
@@ -26,12 +27,14 @@ final class AuthManager: NSObject {
     @discardableResult
     func createUser(email: String, password: String) async throws -> AuthUserModel {
         let authDataResult = try await Auth.auth().createUser(withEmail: email, password: password)
+        PurchasesManager.shared.loginUser(uid: authDataResult.user.uid)
         return AuthUserModel(user: authDataResult.user)
     }
     
     @discardableResult 
     func signIn(email: String, password: String) async throws -> AuthUserModel {
         let authDataResult = try await Auth.auth().signIn(withEmail: email, password: password)
+        PurchasesManager.shared.loginUser(uid: authDataResult.user.uid)
         return AuthUserModel(user: authDataResult.user)
     }
     
@@ -43,6 +46,7 @@ final class AuthManager: NSObject {
     
     func signIn(credential: AuthCredential) async throws -> AuthUserModel {
         let authDataResult = try await Auth.auth().signIn(with: credential)
+        PurchasesManager.shared.loginUser(uid: authDataResult.user.uid)
         let model = AuthUserModel(user: authDataResult.user)
         return model
     }

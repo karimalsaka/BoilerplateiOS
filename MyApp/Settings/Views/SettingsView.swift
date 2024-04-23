@@ -29,6 +29,24 @@ struct SettingsView: View {
                         .tint(.cyan)
                 }
                 
+                Section(header: Text("Subscription")) {
+                    Button(action: {
+                        Task {
+                            do {
+                                try await viewModel.showManageSubscriptions()
+                            } catch {
+                                coordinator.showErrorAlert(error.localizedDescription)
+                            }
+                        }
+                    }) {
+                        HStack {
+                            Text("Manage Subscription")
+                            Spacer()
+                        }
+                    }
+                }
+
+                
                 Section(header: Text("Account")) {
                     Button(action: {
                         coordinator.show(.accountSettings)

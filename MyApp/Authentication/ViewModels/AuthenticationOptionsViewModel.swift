@@ -61,6 +61,7 @@ extension AuthenticationOptionsViewModel: ASAuthorizationControllerDelegate {
                 let authDataResult = try await authManager.signInWithApple(tokens: tokens)
                 try await userManager.createNewUser(auth: authDataResult) 
                 didSignInWithAppleSuccessfully = true
+                appleSignInError = nil
             } catch {
                 appleSignInError = .signInError
             }

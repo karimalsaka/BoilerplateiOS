@@ -1,4 +1,5 @@
 import Foundation
+import RevenueCat
 
 final class SettingsViewModel: ObservableObject {
     private let authManager: AuthManager
@@ -14,6 +15,10 @@ final class SettingsViewModel: ObservableObject {
         }
     }
     
+    func showManageSubscriptions() async throws {
+        try await PurchasesManager.shared.showManageSubscriptions()
+    }
+    
     func signOut() throws {
         try authManager.signOut()
     }
@@ -22,7 +27,6 @@ final class SettingsViewModel: ObservableObject {
         guard let userId = authManager.signedInUserId() else {
             throw AuthError.signInError
         }
-        
         self.user = try await userManager.getUser(userId: userId)
     }
 }
