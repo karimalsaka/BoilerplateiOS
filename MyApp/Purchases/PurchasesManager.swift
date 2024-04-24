@@ -9,20 +9,18 @@ enum PurchasesError: Error {
 final class PurchasesManager: NSObject {
     static let shared = PurchasesManager()
     let purchases = Purchases.shared
-
-    var isUserSubscribed: Bool = false
-
+    
     private override init() {}
 
-    func loginUser(uid: String) {
-        Purchases.shared.logIn(uid) { (customerInfo, created, error) in
-            self.isUserSubscribed = customerInfo?.entitlements["premium"]?.isActive == true
-        }
+    func loginUser(uid: String) async throws {
+        let (_, _) = try await Purchases.shared.logIn(uid)
     }
     
-    func refreshSubscriptionStatus() async {
+    @discardableResult
+    func getSubscriptionStatus() async -> Bool {
         let customerInfo = try? await Purchases.shared.customerInfo()
-        self.isUserSubscribed = customerInfo?.entitlements["premium"]?.isActive == true
+        let isUserSubscribed = customerInfo?.entitlements["premium"]?.isActive == true
+        return isUserSubscribed
     }
     
     func showManageSubscriptions() async throws {

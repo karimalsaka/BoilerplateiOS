@@ -12,12 +12,18 @@ struct SettingsView: View {
     }
 
     var body: some View {
-        VStack {
-            if let user = viewModel.user {
-                Text("Welcome \(user.email ?? "")!")
-                    .font(.subheadline)
+        VStack(spacing: 20) {
+            Group {
+                if let user = viewModel.user {
+                    Text("Welcome \(user.email ?? "")!")
+                        .font(.subheadline)
+                }
+
+                subscriptionSection
+                    .padding(.bottom, 10)
             }
-            
+            .padding(.horizontal, 20)
+
             List {
                 Section(header: Text("Notifications")) {
                     Toggle("Enable Notifications", isOn: $notificationsEnabled)
@@ -28,24 +34,6 @@ struct SettingsView: View {
                     Toggle("Dark Mode", isOn: $darkModeEnabled)
                         .tint(.cyan)
                 }
-                
-                Section(header: Text("Subscription")) {
-                    Button(action: {
-                        Task {
-                            do {
-                                try await viewModel.showManageSubscriptions()
-                            } catch {
-                                coordinator.showErrorAlert(error.localizedDescription)
-                            }
-                        }
-                    }) {
-                        HStack {
-                            Text("Manage Subscription")
-                            Spacer()
-                        }
-                    }
-                }
-
                 
                 Section(header: Text("Account")) {
                     Button(action: {
@@ -85,11 +73,50 @@ struct SettingsView: View {
                 .background(Color.white)
                 .padding()
                 .listRowSeparator(.hidden)
+                
 
             }
             .listStyle(PlainListStyle())
             .frame(maxWidth: .infinity)
             .navigationTitle("Settings")
+        }.onAppear {
+            Task {
+                await viewModel.getSubscriptionStatus()
+            }
+        }
+    }
+
+    var subscriptionSection: some View {
+        VStack {
+            HStack {
+                Text("Subscription")
+                    .font(.title)
+                    .fontWeight(.bold)
+                
+                Spacer()
+                Text(viewModel.isUserSubscribed ? "Active" : "Inactive")
+                    .font(.title)
+                    .fontWeight(.bold)
+                    .foregroundStyle(viewModel.isUserSubscribed ? Color.cyan : Color.gray)
+            }
+
+            Button {
+                Task {
+                    do {
+                        try await viewModel.showManageSubscriptions()
+                    } catch {
+                        coordinator.showErrorAlert(error.localizedDescription)
+                    }
+                }
+            } label: {
+                Text(viewModel.isUserSubscribed ? "Manage Subscription" : "Subscribe!")
+                    .font(.headline)
+                    .foregroundStyle(Color.white)
+                    .frame(height: 50)
+                    .frame(maxWidth: .infinity)
+                    .background(Color.cyan)
+                    .cornerRadius(20)
+            }
         }
     }
 }

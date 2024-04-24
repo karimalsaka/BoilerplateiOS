@@ -5,6 +5,7 @@ final class SettingsViewModel: ObservableObject {
     private let authManager: AuthManager
     private let userManager: UserManager
     @Published var user: DBUser? = nil
+    @Published var isUserSubscribed: Bool = false
 
     init(authManager: AuthManager, userManager: UserManager) {
         self.authManager = authManager
@@ -12,6 +13,7 @@ final class SettingsViewModel: ObservableObject {
         
         Task {
             try await loadUserInfo()
+            await getSubscriptionStatus()
         }
     }
     
@@ -28,5 +30,10 @@ final class SettingsViewModel: ObservableObject {
             throw AuthError.signInError
         }
         self.user = try await userManager.getUser(userId: userId)
+    }
+    
+    func getSubscriptionStatus() async {
+        isUserSubscribed = await PurchasesManager.shared.getSubscriptionStatus()
+        return
     }
 }
