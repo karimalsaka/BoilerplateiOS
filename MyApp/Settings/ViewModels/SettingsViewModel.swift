@@ -29,11 +29,19 @@ final class SettingsViewModel: ObservableObject {
         guard let userId = authManager.signedInUserId() else {
             throw AuthError.signInError
         }
-        self.user = try await userManager.getUser(userId: userId)
+        
+        let user = try await userManager.getUser(userId: userId)
+        await MainActor.run {
+            self.user = user
+        }
     }
     
     func getSubscriptionStatus() async {
-        isUserSubscribed = await PurchasesManager.shared.getSubscriptionStatus()
+        let isUserSubscribed = await PurchasesManager.shared.getSubscriptionStatus()
+        
+        await MainActor.run {
+            self.isUserSubscribed = isUserSubscribed
+        }
         return
     }
 }

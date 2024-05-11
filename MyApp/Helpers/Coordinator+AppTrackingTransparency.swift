@@ -9,7 +9,7 @@ extension Coordinator {
         ATTrackingManager.requestTrackingAuthorization { status in
             switch status {
             case .authorized:
-                let idfa = ASIdentifierManager.shared().advertisingIdentifier
+                let _ = ASIdentifierManager.shared().advertisingIdentifier
             case .denied, .notDetermined, .restricted:
                 break
             @unknown default:
