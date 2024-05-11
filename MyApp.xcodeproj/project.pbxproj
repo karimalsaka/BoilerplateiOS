@@ -67,6 +67,8 @@
 		994A273F2BD80CA20062CB3A /* PurchasesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994A273E2BD80CA20062CB3A /* PurchasesManager.swift */; };
 		994A27402BD810FB0062CB3A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9938B0BA2BD7801B00D448B0 /* GoogleService-Info.plist */; };
 		995176372BEF347200EF9B8A /* PaywallView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 995176362BEF347200EF9B8A /* PaywallView.swift */; };
+		9951763A2BEF415D00EF9B8A /* Color+DesignSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 995176392BEF415D00EF9B8A /* Color+DesignSystem.swift */; };
+		9951763C2BEF41F000EF9B8A /* ColorName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9951763B2BEF41F000EF9B8A /* ColorName.swift */; };
 		997BB8C42BCE8B1F008BAD90 /* AuthenticationFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 997BB8C32BCE8B1F008BAD90 /* AuthenticationFlowCoordinator.swift */; };
 		997BB8C72BCE8B2B008BAD90 /* AuthenticationFlowRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 997BB8C62BCE8B2B008BAD90 /* AuthenticationFlowRouter.swift */; };
 		997BB8C92BCE91EC008BAD90 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 997BB8C82BCE91DE008BAD90 /* SettingsView.swift */; };
@@ -108,6 +110,8 @@
 		9938B0BA2BD7801B00D448B0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		994A273E2BD80CA20062CB3A /* PurchasesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchasesManager.swift; sourceTree = "<group>"; };
 		995176362BEF347200EF9B8A /* PaywallView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaywallView.swift; sourceTree = "<group>"; };
+		995176392BEF415D00EF9B8A /* Color+DesignSystem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+DesignSystem.swift"; sourceTree = "<group>"; };
+		9951763B2BEF41F000EF9B8A /* ColorName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorName.swift; sourceTree = "<group>"; };
 		997BB8C32BCE8B1F008BAD90 /* AuthenticationFlowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationFlowCoordinator.swift; sourceTree = "<group>"; };
 		997BB8C62BCE8B2B008BAD90 /* AuthenticationFlowRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationFlowRouter.swift; sourceTree = "<group>"; };
 		997BB8C82BCE91DE008BAD90 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
@@ -233,6 +237,7 @@
 				997BB8D12BD04943008BAD90 /* MyApp.entitlements */,
 				99388F7E2BC935BC008342BD /* MyAppApp.swift */,
 				99388FC52BC93D3A008342BD /* AppDelegate.swift */,
+				995176382BEF414500EF9B8A /* DesignSystem */,
 				99388FD82BCA95B5008342BD /* Navigation */,
 				99388FC72BC93FCF008342BD /* Authentication */,
 				99283BFF2BD28170002959F0 /* FirestoreDatabase */,
@@ -366,6 +371,15 @@
 				995176362BEF347200EF9B8A /* PaywallView.swift */,
 			);
 			path = Purchases;
+			sourceTree = "<group>";
+		};
+		995176382BEF414500EF9B8A /* DesignSystem */ = {
+			isa = PBXGroup;
+			children = (
+				995176392BEF415D00EF9B8A /* Color+DesignSystem.swift */,
+				9951763B2BEF41F000EF9B8A /* ColorName.swift */,
+			);
+			path = DesignSystem;
 			sourceTree = "<group>";
 		};
 		997BB8C52BCE8B26008BAD90 /* Coordinator */ = {
@@ -517,10 +531,12 @@
 				99388FE72BCA9BED008342BD /* AppRouter.swift in Sources */,
 				99388FDF2BCA96DD008342BD /* TabbarCoordinator.swift in Sources */,
 				99388FEC2BCAA25A008342BD /* HomeFlowCoordinator.swift in Sources */,
+				9951763A2BEF415D00EF9B8A /* Color+DesignSystem.swift in Sources */,
 				994A273F2BD80CA20062CB3A /* PurchasesManager.swift in Sources */,
 				99388FE12BCA96EA008342BD /* TabbarRouter.swift in Sources */,
 				9938B0A72BD43B1600D448B0 /* Coordinator+AppTrackingTransparency.swift in Sources */,
 				9938B0A52BD3F71000D448B0 /* Coordinator+UIAlert.swift in Sources */,
+				9951763C2BEF41F000EF9B8A /* ColorName.swift in Sources */,
 				99297BC72BD11A980027169D /* SignUpWithEmailViewModel.swift in Sources */,
 				99388FCB2BC94143008342BD /* AuthenticationOptionsView.swift in Sources */,
 				997BB8CE2BCE9229008BAD90 /* SettingsFlowRouter.swift in Sources */,

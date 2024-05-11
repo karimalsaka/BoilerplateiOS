@@ -8,10 +8,10 @@ struct ResetPasswordView: View {
         self._viewModel = StateObject(wrappedValue: viewModel)
     }
     var body: some View {
-        VStack {
+        VStack(spacing: 15) {
             TextField("Email", text: $viewModel.email)
                 .padding()
-                .background(Color.gray.opacity(0.1))
+                .background(Color.designSystem(.secondaryBackground).opacity(0.2))
                 .cornerRadius(5)
 
             Button {
@@ -27,10 +27,10 @@ struct ResetPasswordView: View {
             } label: {
                 Text("Send Reset Password email")
                     .font(.headline)
-                    .foregroundStyle(Color.white)
+                    .foregroundStyle(Color.designSystem(.primaryControlText))
                     .frame(height: 55)
                     .frame(maxWidth: .infinity)
-                    .background(Color.cyan)
+                    .background(Color.designSystem(.primaryControlBackground))
                     .cornerRadius(10)
             }
         }
@@ -41,8 +41,7 @@ struct ResetPasswordView: View {
 
 #Preview {
     let authManger = AuthManager()
-    let userManager = UserManager()
 
-    let viewModel = SignUpWithEmailViewModel(authManager: authManger, userManager: userManager)
-    return SignUpWithEmailView(viewModel: viewModel)
+    let viewModel = ResetPasswordViewModel(authManager: authManger)
+    return ResetPasswordView(viewModel: viewModel)
 }

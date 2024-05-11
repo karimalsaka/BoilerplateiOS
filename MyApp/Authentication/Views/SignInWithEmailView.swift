@@ -11,12 +11,12 @@ struct SignInWithEmailView: View {
         VStack(alignment: .leading) {
             TextField("Email", text: $viewModel.email)
                 .padding()
-                .background(Color.gray.opacity(0.1))
+                .background(Color.designSystem(.secondaryBackground).opacity(0.2))
                 .cornerRadius(10)
             
             SecureField("Password", text: $viewModel.password)
                 .padding()
-                .background(Color.gray.opacity(0.1))
+                .background(Color.designSystem(.secondaryBackground).opacity(0.2))
                 .cornerRadius(10)
             
             Button {
@@ -32,10 +32,10 @@ struct SignInWithEmailView: View {
             } label: {
                 Text("Sign In")
                     .font(.headline)
-                    .foregroundStyle(Color.white)
+                    .foregroundStyle(Color.designSystem(.primaryControlText))
                     .frame(height: 55)
                     .frame(maxWidth: .infinity)
-                    .background(Color.cyan)
+                    .background(Color.designSystem(.primaryControlBackground))
                     .cornerRadius(5)
             }
             .padding(.bottom, 20)
@@ -49,12 +49,12 @@ struct SignInWithEmailView: View {
                 Text("Reset my password")
                     .font(.headline)
                     .tint(.blue)
-                    .foregroundStyle(Color.cyan)
+                    .foregroundStyle(Color.designSystem(.secondaryControlText))
                     .frame(height: 55)
                     .frame(maxWidth: .infinity)
                     .overlay(
                         RoundedRectangle(cornerRadius: 5)
-                            .stroke(Color.cyan, lineWidth: 1)
+                            .stroke(Color.designSystem(.secondaryControlText), lineWidth: 1)
                 )
             }
         }

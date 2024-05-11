@@ -16,7 +16,7 @@ struct AuthenticationOptionsView: View {
                     // replace with image
                     Rectangle()
                         .frame(height: 300)
-                        .foregroundStyle(Color.cyan)
+                        .foregroundStyle(Color.designSystem(.primaryControlBackground))
                         .clipShape(RoundedRectangle(cornerRadius: 10))
                         .padding(.top, 30)
                         .padding(.bottom, 15)
@@ -40,10 +40,10 @@ struct AuthenticationOptionsView: View {
                     } label: {
                         Text("Sign In with Email")
                             .font(.headline)
-                            .foregroundStyle(Color.white)
+                            .foregroundStyle(Color.designSystem(.primaryControlText))
                             .frame(height: 55)
                             .frame(maxWidth: .infinity)
-                            .background(Color.cyan)
+                            .background(Color.designSystem(.primaryControlBackground))
                             .cornerRadius(5)
                     }
                     
@@ -56,10 +56,10 @@ struct AuthenticationOptionsView: View {
                     } label: {
                         Text("Sign Up with Email")
                             .font(.headline)
-                            .foregroundStyle(Color.white)
+                            .foregroundStyle(Color.designSystem(.primaryControlText))
                             .frame(height: 55)
                             .frame(maxWidth: .infinity)
-                            .background(Color.cyan)
+                            .background(Color.designSystem(.primaryControlBackground))
                             .cornerRadius(5)
                     }
                      

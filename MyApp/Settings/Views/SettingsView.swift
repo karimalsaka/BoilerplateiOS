@@ -21,12 +21,12 @@ struct SettingsView: View {
                 
                 Section(header: Text("Notifications")) {
                     Toggle("Enable Notifications", isOn: $notificationsEnabled)
-                        .tint(.cyan)
+                        .tint(.designSystem(.primaryControlBackground))
                 }
                 
                 Section(header: Text("Appearance")) {
                     Toggle("Dark Mode", isOn: $darkModeEnabled)
-                        .tint(.cyan)
+                        .tint(.designSystem(.primaryControlBackground))
                 }
                 
                 Section(header: Text("Account")) {
@@ -37,7 +37,7 @@ struct SettingsView: View {
                             Text("Manage Account")
                             Spacer()
                             Image(systemName: "arrow.right")
-                                .foregroundStyle(Color.gray)
+                                .foregroundStyle(Color.designSystem(.primaryText))
                         }
                     }
                 }
@@ -57,14 +57,13 @@ struct SettingsView: View {
                 } label: {
                     Text("Sign Out")
                         .font(.headline)
-                        .foregroundStyle(Color.white)
+                        .foregroundStyle(Color.designSystem(.primaryControlText))
                         .frame(height: 55)
                         .frame(maxWidth: .infinity)
-                        .background(Color.cyan)
+                        .background(Color.designSystem(.primaryControlBackground))
                         .cornerRadius(10)
                 }
                 .frame(maxWidth: .infinity)
-                .background(Color.white)
                 .padding()
                 .listRowSeparator(.hidden)
                 
@@ -97,7 +96,7 @@ struct SettingsView: View {
                 Text(viewModel.isUserSubscribed ? "Active" : "Inactive")
                     .font(.title)
                     .fontWeight(.bold)
-                    .foregroundStyle(viewModel.isUserSubscribed ? Color.cyan : Color.gray)
+                    .foregroundStyle(viewModel.isUserSubscribed ? Color.designSystem(.primaryControlBackground) : Color.designSystem(.disabledControlBackground))
             }
 
             Button {
@@ -115,10 +114,10 @@ struct SettingsView: View {
             } label: {
                 Text(viewModel.isUserSubscribed ? "Manage Subscription" : "Subscribe!")
                     .font(.headline)
-                    .foregroundStyle(Color.white)
+                    .foregroundStyle(Color.designSystem(.primaryControlText))
                     .frame(height: 55)
                     .frame(maxWidth: .infinity)
-                    .background(Color.cyan)
+                    .background(Color.designSystem(.primaryControlBackground))
                     .cornerRadius(10)
             }
         }
