@@ -2,11 +2,15 @@ import SwiftUI
 
 enum HomeFlowRouter: NavigationRouter, Equatable {
     case home
+    case paywall
     
     var title: String {
         switch self {
         case .home:
             return "Home"
+        case .paywall:
+            return "Paywall"
+
         }
     }
 
@@ -14,6 +18,8 @@ enum HomeFlowRouter: NavigationRouter, Equatable {
         switch self {
         case .home:
             return .push
+        case .paywall:
+            return .presentModally
         }
     }
     
@@ -23,6 +29,8 @@ enum HomeFlowRouter: NavigationRouter, Equatable {
         case .home:
             let viewModel = HomeViewModel()
             HomeView(viewModel: viewModel)
+        case .paywall:
+            PaywallView()
         }
     }
 }

@@ -4,7 +4,8 @@ import RevenueCatUI
 struct HomeView: View {
     @EnvironmentObject var coordinator: HomeFlowCoordinator<HomeFlowRouter>
     @StateObject private var viewModel: HomeViewModel
-
+    @State var showPaywallOnLaunch: Bool = true
+    
     init(viewModel: HomeViewModel) {
         self._viewModel = StateObject(wrappedValue: viewModel)
     }
@@ -22,14 +23,16 @@ struct HomeView: View {
             .frame(maxWidth: .infinity, maxHeight: .infinity)
          }.onAppear {
              coordinator.showATTPermissionsAlert()
+             if showPaywallOnLaunch {
+                 showPaywallOnLaunch = false
+                 Task {
+                     if await !PurchasesManager.shared.getSubscriptionStatus() {
+                         coordinator.show(.paywall)
+                     }
+                 }
+                 
+             }
          }
-         .presentPaywallIfNeeded(
-            requiredEntitlementIdentifier: "premium",
-            purchaseFailure: { error in
-                print("purchase failed with error \(error.localizedDescription)")
-                
-            }        
-         )
     }
 }
 
