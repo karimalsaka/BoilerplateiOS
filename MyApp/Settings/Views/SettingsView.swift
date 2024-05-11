@@ -13,18 +13,12 @@ struct SettingsView: View {
 
     var body: some View {
         VStack(spacing: 20) {
-            Group {
-                if let user = viewModel.user {
-                    Text("Welcome \(user.email ?? "")!")
-                        .font(.subheadline)
-                }
-
+            List {
                 subscriptionSection
                     .padding(.bottom, 10)
-            }
-            .padding(.horizontal, 20)
-
-            List {
+                    .padding(.horizontal, 10)
+                    .listSectionSeparator(.hidden, edges: [.top, .bottom])
+                
                 Section(header: Text("Notifications")) {
                     Toggle("Enable Notifications", isOn: $notificationsEnabled)
                         .tint(.cyan)
@@ -87,7 +81,13 @@ struct SettingsView: View {
     }
 
     var subscriptionSection: some View {
-        VStack {
+        VStack(alignment: .center) {
+            if let user = viewModel.user {
+                Text("Welcome \(user.email ?? "")!")
+                    .font(.subheadline)
+                    .padding(.bottom, 5)
+            }
+
             HStack {
                 Text("Subscription")
                     .font(.title)
@@ -101,21 +101,25 @@ struct SettingsView: View {
             }
 
             Button {
-                Task {
-                    do {
-                        try await viewModel.showManageSubscriptions()
-                    } catch {
-                        coordinator.showErrorAlert(error.localizedDescription)
+                if !viewModel.isUserSubscribed {
+                    coordinator.show(.paywall)
+                } else {
+                    Task {
+                        do {
+                            try await viewModel.showManageSubscriptions()
+                        } catch {
+                            coordinator.showErrorAlert(error.localizedDescription)
+                        }
                     }
                 }
             } label: {
                 Text(viewModel.isUserSubscribed ? "Manage Subscription" : "Subscribe!")
                     .font(.headline)
                     .foregroundStyle(Color.white)
-                    .frame(height: 50)
+                    .frame(height: 55)
                     .frame(maxWidth: .infinity)
                     .background(Color.cyan)
-                    .cornerRadius(20)
+                    .cornerRadius(10)
             }
         }
     }

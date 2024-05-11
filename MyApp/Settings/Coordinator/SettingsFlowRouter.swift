@@ -3,9 +3,15 @@ import SwiftUI
 enum SettingsFlowRouter: NavigationRouter, Equatable {
     case settings(authManager: AuthManager, userManager: UserManager)
     case accountSettings
+    case paywall
         
     var transition: NavigationTranisitionStyle {
-        .push
+        switch self {
+        case .settings, .accountSettings:
+            return .push
+        case .paywall:
+            return .presentModally
+        }
     }
     
     @MainActor @ViewBuilder
@@ -17,6 +23,8 @@ enum SettingsFlowRouter: NavigationRouter, Equatable {
         case .accountSettings:
             let viewModel = ManageAccountViewModel()
             ManageAccountView(viewModel: viewModel)
+        case .paywall:
+            PaywallView()
         }
     }
 }

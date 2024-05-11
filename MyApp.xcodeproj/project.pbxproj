@@ -66,6 +66,7 @@
 		994A273C2BD7F9A30062CB3A /* RevenueCatUI in Frameworks */ = {isa = PBXBuildFile; productRef = 994A273B2BD7F9A30062CB3A /* RevenueCatUI */; };
 		994A273F2BD80CA20062CB3A /* PurchasesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994A273E2BD80CA20062CB3A /* PurchasesManager.swift */; };
 		994A27402BD810FB0062CB3A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9938B0BA2BD7801B00D448B0 /* GoogleService-Info.plist */; };
+		995176372BEF347200EF9B8A /* PaywallView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 995176362BEF347200EF9B8A /* PaywallView.swift */; };
 		997BB8C42BCE8B1F008BAD90 /* AuthenticationFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 997BB8C32BCE8B1F008BAD90 /* AuthenticationFlowCoordinator.swift */; };
 		997BB8C72BCE8B2B008BAD90 /* AuthenticationFlowRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 997BB8C62BCE8B2B008BAD90 /* AuthenticationFlowRouter.swift */; };
 		997BB8C92BCE91EC008BAD90 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 997BB8C82BCE91DE008BAD90 /* SettingsView.swift */; };
@@ -106,6 +107,7 @@
 		9938B0A62BD43B1500D448B0 /* Coordinator+AppTrackingTransparency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Coordinator+AppTrackingTransparency.swift"; sourceTree = "<group>"; };
 		9938B0BA2BD7801B00D448B0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		994A273E2BD80CA20062CB3A /* PurchasesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchasesManager.swift; sourceTree = "<group>"; };
+		995176362BEF347200EF9B8A /* PaywallView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaywallView.swift; sourceTree = "<group>"; };
 		997BB8C32BCE8B1F008BAD90 /* AuthenticationFlowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationFlowCoordinator.swift; sourceTree = "<group>"; };
 		997BB8C62BCE8B2B008BAD90 /* AuthenticationFlowRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationFlowRouter.swift; sourceTree = "<group>"; };
 		997BB8C82BCE91DE008BAD90 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
@@ -361,6 +363,7 @@
 			isa = PBXGroup;
 			children = (
 				994A273E2BD80CA20062CB3A /* PurchasesManager.swift */,
+				995176362BEF347200EF9B8A /* PaywallView.swift */,
 			);
 			path = Purchases;
 			sourceTree = "<group>";
@@ -506,6 +509,7 @@
 				997BB8C42BCE8B1F008BAD90 /* AuthenticationFlowCoordinator.swift in Sources */,
 				99388FED2BCAA25C008342BD /* HomeFlowRouter.swift in Sources */,
 				99388F7F2BC935BC008342BD /* MyAppApp.swift in Sources */,
+				995176372BEF347200EF9B8A /* PaywallView.swift in Sources */,
 				997BB8C92BCE91EC008BAD90 /* SettingsView.swift in Sources */,
 				99283C012BD2819E002959F0 /* UserManager.swift in Sources */,
 				997BB8D02BD02494008BAD90 /* ManageAccountView.swift in Sources */,
