@@ -19,7 +19,7 @@ struct SignInWithEmailView: View {
                 .background(Color.designSystem(.secondaryBackground).opacity(0.2))
                 .cornerRadius(10)
             
-            Button {
+            PrimaryButton {
                 Task {
                     do {
                         try await viewModel.signIn()
@@ -28,34 +28,18 @@ struct SignInWithEmailView: View {
                         coordinator.showErrorAlert("Failed to sign in with error: \n \(error.localizedDescription)")
                     }
                 }
-                
             } label: {
                 Text("Sign In")
-                    .font(.designSystem(.button1))
-                    .foregroundStyle(Color.designSystem(.primaryControlText))
-                    .frame(height: 55)
-                    .frame(maxWidth: .infinity)
-                    .background(Color.designSystem(.primaryControlBackground))
-                    .cornerRadius(5)
             }
             .padding(.bottom, 20)
-            
+
             Text("Forgot password?")
                 .padding(.bottom, 5)
             
-            Button {
+            SecondaryButton {
                 coordinator.show(.resetPassword(authManager: viewModel.authManager))
             } label: {
                 Text("Reset my password")
-                    .font(.designSystem(.button1))
-                    .tint(.blue)
-                    .foregroundStyle(Color.designSystem(.secondaryControlText))
-                    .frame(height: 55)
-                    .frame(maxWidth: .infinity)
-                    .overlay(
-                        RoundedRectangle(cornerRadius: 5)
-                            .stroke(Color.designSystem(.secondaryControlText), lineWidth: 1)
-                )
             }
         }
         .padding()

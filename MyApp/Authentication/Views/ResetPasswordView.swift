@@ -14,7 +14,7 @@ struct ResetPasswordView: View {
                 .background(Color.designSystem(.secondaryBackground).opacity(0.2))
                 .cornerRadius(5)
 
-            Button {
+            PrimaryButton {
                 Task {
                     do {
                         try await viewModel.resetPassword()
@@ -26,12 +26,6 @@ struct ResetPasswordView: View {
                 
             } label: {
                 Text("Send Reset Password email")
-                    .font(.designSystem(.button1))
-                    .foregroundStyle(Color.designSystem(.primaryControlText))
-                    .frame(height: 55)
-                    .frame(maxWidth: .infinity)
-                    .background(Color.designSystem(.primaryControlBackground))
-                    .cornerRadius(10)
             }
         }
         .padding()

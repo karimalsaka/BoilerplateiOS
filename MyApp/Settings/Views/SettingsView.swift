@@ -44,7 +44,7 @@ struct SettingsView: View {
                 
                 Spacer()
 
-                Button {
+                PrimaryButton {
                     Task {
                         do {
                             try viewModel.signOut()
@@ -56,12 +56,6 @@ struct SettingsView: View {
                     }
                 } label: {
                     Text("Sign Out")
-                        .font(.designSystem(.button1))
-                        .foregroundStyle(Color.designSystem(.primaryControlText))
-                        .frame(height: 55)
-                        .frame(maxWidth: .infinity)
-                        .background(Color.designSystem(.primaryControlBackground))
-                        .cornerRadius(10)
                 }
                 .frame(maxWidth: .infinity)
                 .padding()
@@ -98,7 +92,7 @@ struct SettingsView: View {
                     .foregroundStyle(viewModel.isUserSubscribed ? Color.designSystem(.primaryControlBackground) : Color.designSystem(.disabledControlBackground))
             }
 
-            Button {
+            PrimaryButton {
                 if !viewModel.isUserSubscribed {
                     coordinator.show(.paywall)
                 } else {
@@ -112,12 +106,6 @@ struct SettingsView: View {
                 }
             } label: {
                 Text(viewModel.isUserSubscribed ? "Manage Subscription" : "Subscribe!")
-                    .font(.designSystem(.button1))
-                    .foregroundStyle(Color.designSystem(.primaryControlText))
-                    .frame(height: 55)
-                    .frame(maxWidth: .infinity)
-                    .background(Color.designSystem(.primaryControlBackground))
-                    .cornerRadius(10)
             }
         }
     }

@@ -34,32 +34,22 @@ struct AuthenticationOptionsView: View {
                             .frame(height: 55)
                     }
 
-                    Button {
+                    PrimaryButton {
                         coordinator.show(.signInWithEmail(authManager: viewModel.authManager, userManager: viewModel.userManager))
+
                     } label: {
                         Text("Sign In with Email")
-                            .font(.designSystem(.button1))
-                            .foregroundStyle(Color.designSystem(.primaryControlText))
-                            .frame(height: 55)
-                            .frame(maxWidth: .infinity)
-                            .background(Color.designSystem(.primaryControlBackground))
-                            .cornerRadius(5)
                     }
                     
                     Text("or")
                         .font(.designSystem(.body1))
                         .padding(.vertical, 5)
                     
-                    Button {
+                    PrimaryButton {
                         coordinator.show(.signUpWithEmail(authManager: viewModel.authManager, userManager: viewModel.userManager))
+
                     } label: {
                         Text("Sign Up with Email")
-                            .font(.designSystem(.button1))
-                            .foregroundStyle(Color.designSystem(.primaryControlText))
-                            .frame(height: 55)
-                            .frame(maxWidth: .infinity)
-                            .background(Color.designSystem(.primaryControlBackground))
-                            .cornerRadius(5)
                     }
                      
                      Spacer()

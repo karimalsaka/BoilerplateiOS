@@ -71,6 +71,8 @@
 		9951763C2BEF41F000EF9B8A /* ColorName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9951763B2BEF41F000EF9B8A /* ColorName.swift */; };
 		995176402BEF4EED00EF9B8A /* FontType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9951763F2BEF4EED00EF9B8A /* FontType.swift */; };
 		995176422BEF4F0700EF9B8A /* Font+DesignSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 995176412BEF4F0700EF9B8A /* Font+DesignSystem.swift */; };
+		995176452BF0D8DE00EF9B8A /* PrimaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 995176442BF0D8DE00EF9B8A /* PrimaryButton.swift */; };
+		995176472BF0D8F600EF9B8A /* SecondaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 995176462BF0D8F600EF9B8A /* SecondaryButton.swift */; };
 		997BB8C42BCE8B1F008BAD90 /* AuthenticationFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 997BB8C32BCE8B1F008BAD90 /* AuthenticationFlowCoordinator.swift */; };
 		997BB8C72BCE8B2B008BAD90 /* AuthenticationFlowRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 997BB8C62BCE8B2B008BAD90 /* AuthenticationFlowRouter.swift */; };
 		997BB8C92BCE91EC008BAD90 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 997BB8C82BCE91DE008BAD90 /* SettingsView.swift */; };
@@ -116,6 +118,8 @@
 		9951763B2BEF41F000EF9B8A /* ColorName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorName.swift; sourceTree = "<group>"; };
 		9951763F2BEF4EED00EF9B8A /* FontType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontType.swift; sourceTree = "<group>"; };
 		995176412BEF4F0700EF9B8A /* Font+DesignSystem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Font+DesignSystem.swift"; sourceTree = "<group>"; };
+		995176442BF0D8DE00EF9B8A /* PrimaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButton.swift; sourceTree = "<group>"; };
+		995176462BF0D8F600EF9B8A /* SecondaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondaryButton.swift; sourceTree = "<group>"; };
 		997BB8C32BCE8B1F008BAD90 /* AuthenticationFlowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationFlowCoordinator.swift; sourceTree = "<group>"; };
 		997BB8C62BCE8B2B008BAD90 /* AuthenticationFlowRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationFlowRouter.swift; sourceTree = "<group>"; };
 		997BB8C82BCE91DE008BAD90 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
@@ -382,6 +386,7 @@
 			children = (
 				9951763D2BEF4EDB00EF9B8A /* Colors */,
 				9951763E2BEF4EE000EF9B8A /* Fonts */,
+				995176432BF0D8CD00EF9B8A /* Components */,
 			);
 			path = DesignSystem;
 			sourceTree = "<group>";
@@ -402,6 +407,15 @@
 				995176412BEF4F0700EF9B8A /* Font+DesignSystem.swift */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		995176432BF0D8CD00EF9B8A /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				995176462BF0D8F600EF9B8A /* SecondaryButton.swift */,
+				995176442BF0D8DE00EF9B8A /* PrimaryButton.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 		997BB8C52BCE8B26008BAD90 /* Coordinator */ = {
@@ -542,10 +556,12 @@
 				99297BCD2BD11B040027169D /* HomeViewModel.swift in Sources */,
 				99388FD52BC98D05008342BD /* SignUpWithEmailView.swift in Sources */,
 				99388FDC2BCA9651008342BD /* NavigationRouter.swift in Sources */,
+				995176472BF0D8F600EF9B8A /* SecondaryButton.swift in Sources */,
 				99388FC92BC93FDC008342BD /* SignInWithEmailView.swift in Sources */,
 				997BB8C42BCE8B1F008BAD90 /* AuthenticationFlowCoordinator.swift in Sources */,
 				99388FED2BCAA25C008342BD /* HomeFlowRouter.swift in Sources */,
 				99388F7F2BC935BC008342BD /* MyAppApp.swift in Sources */,
+				995176452BF0D8DE00EF9B8A /* PrimaryButton.swift in Sources */,
 				995176372BEF347200EF9B8A /* PaywallView.swift in Sources */,
 				995176422BEF4F0700EF9B8A /* Font+DesignSystem.swift in Sources */,
 				997BB8C92BCE91EC008BAD90 /* SettingsView.swift in Sources */,

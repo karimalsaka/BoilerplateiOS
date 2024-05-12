@@ -20,7 +20,7 @@ struct SignUpWithEmailView: View {
                 .background(Color.designSystem(.secondaryBackground).opacity(0.2))
                 .cornerRadius(10)
             
-            Button {
+            PrimaryButton {
                 Task {
                     do {                        
                         try await viewModel.signUp()
@@ -32,12 +32,6 @@ struct SignUpWithEmailView: View {
                 
             } label: {
                 Text("Create account")
-                    .font(.designSystem(.button1))
-                    .foregroundStyle(Color.designSystem(.primaryControlText))
-                    .frame(height: 55)
-                    .frame(maxWidth: .infinity)
-                    .background(Color.designSystem(.primaryControlBackground))
-                    .cornerRadius(5)
             }
         }
         .padding()
