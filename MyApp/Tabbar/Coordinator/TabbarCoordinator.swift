@@ -35,10 +35,11 @@ class TabBarCoordinator<Router: NavigationRouter>: Coordinator<TabBarRouter> {
 
         let appearance = UITabBarAppearance()
         appearance.configureWithOpaqueBackground()
+        appearance.backgroundColor = UIColor(Color.designSystem(.primaryBackground))
         tabBarController.tabBar.standardAppearance = appearance
         tabBarController.tabBar.scrollEdgeAppearance = appearance
 
-        tabBarController.tabBar.tintColor = .black
+        tabBarController.tabBar.tintColor = UIColor(Color.designSystem(.primaryText))
         navigationController.setViewControllers([tabBarController], animated: true)
         navigationController.setNavigationBarHidden(true, animated: false)
     }

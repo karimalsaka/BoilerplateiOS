@@ -15,14 +15,14 @@ final class PurchasesManager: NSObject {
     func loginUser(uid: String) async throws {
         let (_, _) = try await Purchases.shared.logIn(uid)
     }
-    
+
     @discardableResult
     func getSubscriptionStatus() async -> Bool {
         let customerInfo = try? await Purchases.shared.customerInfo()
         let isUserSubscribed = customerInfo?.entitlements["premium"]?.isActive == true
         return isUserSubscribed
     }
-    
+
     func showManageSubscriptions() async throws {
         try await purchases.showManageSubscriptions()
     }

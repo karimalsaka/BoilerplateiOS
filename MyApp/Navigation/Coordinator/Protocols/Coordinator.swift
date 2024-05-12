@@ -36,7 +36,7 @@ open class Coordinator<Router: NavigationRouter>: NSObject, CoordinatorProtocol 
         let viewController = UIHostingController(rootView: AnyView(viewWithEnvironmentObjects))
         viewController.view.frame = UIScreen.main.bounds
         
-        navigationController.navigationBar.tintColor = .black
+        navigationController.navigationBar.tintColor = UIColor(Color.designSystem(.primaryText))
         
         if hideNavBar {
             navigationController.setNavigationBarHidden(true, animated: false)

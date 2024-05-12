@@ -33,6 +33,7 @@ struct HomeView: View {
                  
              }
          }
+         .background(Color.designSystem(.primaryBackground))
     }
 }
 

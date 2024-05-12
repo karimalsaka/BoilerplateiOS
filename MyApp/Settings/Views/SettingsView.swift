@@ -18,17 +18,20 @@ struct SettingsView: View {
                     .padding(.bottom, 10)
                     .padding(.horizontal, 10)
                     .listSectionSeparator(.hidden, edges: [.top, .bottom])
-                
+                    .listRowBackground(Color.clear)
+
                 Section(header: Text("Notifications")) {
                     Toggle("Enable Notifications", isOn: $notificationsEnabled)
                         .tint(.designSystem(.primaryControlBackground))
                 }
-                
+                .listRowBackground(Color.clear)
+
                 Section(header: Text("Appearance")) {
                     Toggle("Dark Mode", isOn: $darkModeEnabled)
                         .tint(.designSystem(.primaryControlBackground))
                 }
-                
+                .listRowBackground(Color.clear)
+
                 Section(header: Text("Account")) {
                     Button(action: {
                         coordinator.show(.accountSettings)
@@ -41,8 +44,10 @@ struct SettingsView: View {
                         }
                     }
                 }
-                
+                .listRowBackground(Color.clear)
+
                 Spacer()
+                    .listRowBackground(Color.clear)
 
                 PrimaryButton {
                     Task {
@@ -50,8 +55,7 @@ struct SettingsView: View {
                             try viewModel.signOut()
                             coordinator.userSignedOut()
                         } catch {
-                            //MARK: show error alert to user
-                            print("error")
+                            coordinator.showErrorAlert("Failed to sign out with error: \n \(error.localizedDescription)")
                         }
                     }
                 } label: {
@@ -60,13 +64,15 @@ struct SettingsView: View {
                 .frame(maxWidth: .infinity)
                 .padding()
                 .listRowSeparator(.hidden)
-                
-
+                .listRowBackground(Color.clear)
             }
             .listStyle(PlainListStyle())
+            .background(Color.clear)
             .frame(maxWidth: .infinity)
             .navigationTitle("Settings")
-        }.onAppear {
+        }
+        .background(Color.designSystem(.primaryBackground))
+        .onAppear {
             Task {
                 await viewModel.getSubscriptionStatus()
             }

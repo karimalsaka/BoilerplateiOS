@@ -57,6 +57,7 @@ struct AuthenticationOptionsView: View {
             }
             .padding()
             .frame(maxWidth: .infinity, maxHeight: .infinity)
+            .background(Color.designSystem(.primaryBackground))
             .onChange(of: viewModel.didSignInWithAppleSuccessfully) { _, success in
                 if success {
                     coordinator.userSignedIn()

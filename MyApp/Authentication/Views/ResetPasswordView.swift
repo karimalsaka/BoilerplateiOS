@@ -29,6 +29,8 @@ struct ResetPasswordView: View {
             }
         }
         .padding()
+        .frame(maxHeight: .infinity)
+        .background(Color.designSystem(.primaryBackground))
         .navigationTitle("Reset Password")
     }
 }

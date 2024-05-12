@@ -43,8 +43,9 @@ struct SignInWithEmailView: View {
             }
         }
         .padding()
+        .frame(maxHeight: .infinity)
+        .background(Color.designSystem(.primaryBackground))
         .navigationTitle("Sign in with email")
-        
     }
 }
 
