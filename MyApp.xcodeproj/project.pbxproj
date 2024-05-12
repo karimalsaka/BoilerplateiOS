@@ -69,6 +69,8 @@
 		995176372BEF347200EF9B8A /* PaywallView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 995176362BEF347200EF9B8A /* PaywallView.swift */; };
 		9951763A2BEF415D00EF9B8A /* Color+DesignSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 995176392BEF415D00EF9B8A /* Color+DesignSystem.swift */; };
 		9951763C2BEF41F000EF9B8A /* ColorName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9951763B2BEF41F000EF9B8A /* ColorName.swift */; };
+		995176402BEF4EED00EF9B8A /* FontType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9951763F2BEF4EED00EF9B8A /* FontType.swift */; };
+		995176422BEF4F0700EF9B8A /* Font+DesignSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 995176412BEF4F0700EF9B8A /* Font+DesignSystem.swift */; };
 		997BB8C42BCE8B1F008BAD90 /* AuthenticationFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 997BB8C32BCE8B1F008BAD90 /* AuthenticationFlowCoordinator.swift */; };
 		997BB8C72BCE8B2B008BAD90 /* AuthenticationFlowRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 997BB8C62BCE8B2B008BAD90 /* AuthenticationFlowRouter.swift */; };
 		997BB8C92BCE91EC008BAD90 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 997BB8C82BCE91DE008BAD90 /* SettingsView.swift */; };
@@ -112,6 +114,8 @@
 		995176362BEF347200EF9B8A /* PaywallView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaywallView.swift; sourceTree = "<group>"; };
 		995176392BEF415D00EF9B8A /* Color+DesignSystem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+DesignSystem.swift"; sourceTree = "<group>"; };
 		9951763B2BEF41F000EF9B8A /* ColorName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorName.swift; sourceTree = "<group>"; };
+		9951763F2BEF4EED00EF9B8A /* FontType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontType.swift; sourceTree = "<group>"; };
+		995176412BEF4F0700EF9B8A /* Font+DesignSystem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Font+DesignSystem.swift"; sourceTree = "<group>"; };
 		997BB8C32BCE8B1F008BAD90 /* AuthenticationFlowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationFlowCoordinator.swift; sourceTree = "<group>"; };
 		997BB8C62BCE8B2B008BAD90 /* AuthenticationFlowRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationFlowRouter.swift; sourceTree = "<group>"; };
 		997BB8C82BCE91DE008BAD90 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
@@ -376,10 +380,28 @@
 		995176382BEF414500EF9B8A /* DesignSystem */ = {
 			isa = PBXGroup;
 			children = (
-				995176392BEF415D00EF9B8A /* Color+DesignSystem.swift */,
-				9951763B2BEF41F000EF9B8A /* ColorName.swift */,
+				9951763D2BEF4EDB00EF9B8A /* Colors */,
+				9951763E2BEF4EE000EF9B8A /* Fonts */,
 			);
 			path = DesignSystem;
+			sourceTree = "<group>";
+		};
+		9951763D2BEF4EDB00EF9B8A /* Colors */ = {
+			isa = PBXGroup;
+			children = (
+				9951763B2BEF41F000EF9B8A /* ColorName.swift */,
+				995176392BEF415D00EF9B8A /* Color+DesignSystem.swift */,
+			);
+			path = Colors;
+			sourceTree = "<group>";
+		};
+		9951763E2BEF4EE000EF9B8A /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				9951763F2BEF4EED00EF9B8A /* FontType.swift */,
+				995176412BEF4F0700EF9B8A /* Font+DesignSystem.swift */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 		997BB8C52BCE8B26008BAD90 /* Coordinator */ = {
@@ -511,6 +533,7 @@
 				99388FE32BCA993A008342BD /* AppCoordinator.swift in Sources */,
 				99297BC52BD11A7F0027169D /* SignInWithEmailViewModel.swift in Sources */,
 				99388FD32BC94C10008342BD /* HomeView.swift in Sources */,
+				995176402BEF4EED00EF9B8A /* FontType.swift in Sources */,
 				99388FDA2BCA963E008342BD /* Coordinator.swift in Sources */,
 				997BB8CD2BCE9229008BAD90 /* SettingsFlowCoordinator.swift in Sources */,
 				99388FCE2BC94261008342BD /* AuthManager.swift in Sources */,
@@ -524,6 +547,7 @@
 				99388FED2BCAA25C008342BD /* HomeFlowRouter.swift in Sources */,
 				99388F7F2BC935BC008342BD /* MyAppApp.swift in Sources */,
 				995176372BEF347200EF9B8A /* PaywallView.swift in Sources */,
+				995176422BEF4F0700EF9B8A /* Font+DesignSystem.swift in Sources */,
 				997BB8C92BCE91EC008BAD90 /* SettingsView.swift in Sources */,
 				99283C012BD2819E002959F0 /* UserManager.swift in Sources */,
 				997BB8D02BD02494008BAD90 /* ManageAccountView.swift in Sources */,

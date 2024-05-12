@@ -26,7 +26,7 @@ struct ResetPasswordView: View {
                 
             } label: {
                 Text("Send Reset Password email")
-                    .font(.headline)
+                    .font(.designSystem(.button1))
                     .foregroundStyle(Color.designSystem(.primaryControlText))
                     .frame(height: 55)
                     .frame(maxWidth: .infinity)

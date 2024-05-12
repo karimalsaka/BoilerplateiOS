@@ -23,8 +23,7 @@ struct AuthenticationOptionsView: View {
 
                     Text("Build you million dollar idea in days")
                         .multilineTextAlignment(.center)
-                        .font(.title)
-                        .fontWeight(.bold)
+                        .font(.designSystem(.heading1))
                         .padding(.bottom, 30)
 
                     Button {
@@ -39,7 +38,7 @@ struct AuthenticationOptionsView: View {
                         coordinator.show(.signInWithEmail(authManager: viewModel.authManager, userManager: viewModel.userManager))
                     } label: {
                         Text("Sign In with Email")
-                            .font(.headline)
+                            .font(.designSystem(.button1))
                             .foregroundStyle(Color.designSystem(.primaryControlText))
                             .frame(height: 55)
                             .frame(maxWidth: .infinity)
@@ -48,14 +47,14 @@ struct AuthenticationOptionsView: View {
                     }
                     
                     Text("or")
-                        .font(.system(size: 15, weight: .regular))
+                        .font(.designSystem(.body1))
                         .padding(.vertical, 5)
                     
                     Button {
                         coordinator.show(.signUpWithEmail(authManager: viewModel.authManager, userManager: viewModel.userManager))
                     } label: {
                         Text("Sign Up with Email")
-                            .font(.headline)
+                            .font(.designSystem(.button1))
                             .foregroundStyle(Color.designSystem(.primaryControlText))
                             .frame(height: 55)
                             .frame(maxWidth: .infinity)

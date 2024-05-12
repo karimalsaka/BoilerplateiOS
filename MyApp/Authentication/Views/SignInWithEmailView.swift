@@ -31,7 +31,7 @@ struct SignInWithEmailView: View {
                 
             } label: {
                 Text("Sign In")
-                    .font(.headline)
+                    .font(.designSystem(.button1))
                     .foregroundStyle(Color.designSystem(.primaryControlText))
                     .frame(height: 55)
                     .frame(maxWidth: .infinity)
@@ -47,7 +47,7 @@ struct SignInWithEmailView: View {
                 coordinator.show(.resetPassword(authManager: viewModel.authManager))
             } label: {
                 Text("Reset my password")
-                    .font(.headline)
+                    .font(.designSystem(.button1))
                     .tint(.blue)
                     .foregroundStyle(Color.designSystem(.secondaryControlText))
                     .frame(height: 55)

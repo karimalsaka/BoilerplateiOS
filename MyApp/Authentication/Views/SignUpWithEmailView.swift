@@ -32,7 +32,7 @@ struct SignUpWithEmailView: View {
                 
             } label: {
                 Text("Create account")
-                    .font(.headline)
+                    .font(.designSystem(.button1))
                     .foregroundStyle(Color.designSystem(.primaryControlText))
                     .frame(height: 55)
                     .frame(maxWidth: .infinity)

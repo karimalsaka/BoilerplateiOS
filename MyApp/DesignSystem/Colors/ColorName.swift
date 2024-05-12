@@ -2,6 +2,7 @@
 
 /// defines the names of the colors used in the app's design system
 enum ColorName: String, CaseIterable {
+
     // MARK: Background
     
     ///The main background color

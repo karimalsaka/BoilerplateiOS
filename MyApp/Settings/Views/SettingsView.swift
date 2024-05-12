@@ -56,7 +56,7 @@ struct SettingsView: View {
                     }
                 } label: {
                     Text("Sign Out")
-                        .font(.headline)
+                        .font(.designSystem(.button1))
                         .foregroundStyle(Color.designSystem(.primaryControlText))
                         .frame(height: 55)
                         .frame(maxWidth: .infinity)
@@ -83,19 +83,18 @@ struct SettingsView: View {
         VStack(alignment: .center) {
             if let user = viewModel.user {
                 Text("Welcome \(user.email ?? "")!")
-                    .font(.subheadline)
+                    .font(.designSystem(.heading3))
                     .padding(.bottom, 5)
             }
 
             HStack {
                 Text("Subscription")
-                    .font(.title)
-                    .fontWeight(.bold)
-                
+                    .font(.designSystem(.heading1))
+
                 Spacer()
+
                 Text(viewModel.isUserSubscribed ? "Active" : "Inactive")
-                    .font(.title)
-                    .fontWeight(.bold)
+                    .font(.designSystem(.heading1))
                     .foregroundStyle(viewModel.isUserSubscribed ? Color.designSystem(.primaryControlBackground) : Color.designSystem(.disabledControlBackground))
             }
 
@@ -113,7 +112,7 @@ struct SettingsView: View {
                 }
             } label: {
                 Text(viewModel.isUserSubscribed ? "Manage Subscription" : "Subscribe!")
-                    .font(.headline)
+                    .font(.designSystem(.button1))
                     .foregroundStyle(Color.designSystem(.primaryControlText))
                     .frame(height: 55)
                     .frame(maxWidth: .infinity)

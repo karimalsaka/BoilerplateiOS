@@ -14,8 +14,8 @@ struct HomeView: View {
          ScrollView {
              VStack {
                     Text("Welcome to your home screen")
-                        .font(.headline)
-                        .fontWeight(.semibold)
+                     .font(.designSystem(.heading2))
+                     .multilineTextAlignment(.center)
                 Spacer()
             }
             .padding()
@@ -39,4 +39,5 @@ struct HomeView: View {
 #Preview {
     let viewModel = HomeViewModel()
     return HomeView(viewModel: viewModel)
+        .environmentObject(HomeFlowCoordinator<HomeFlowRouter>())
 }
