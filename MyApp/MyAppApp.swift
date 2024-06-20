@@ -5,7 +5,7 @@ import RevenueCat
 struct MyAppApp: App {
     @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
     init() {
-        /// Input your revenue cat api key
+        /// Pass your RevenueCat api key here
         Purchases.configure(withAPIKey: "appl_qtHpVUsFnvarJzcXiNXRrWQZjDb")
     }
 

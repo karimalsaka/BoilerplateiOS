@@ -13,46 +13,28 @@ struct AuthenticationOptionsView: View {
             ScrollView {
                 VStack(alignment: .center, spacing: 10) {
                     
-                    // replace with image
-                    Rectangle()
+                    Image("login_image")
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
                         .frame(height: 300)
                         .foregroundStyle(Color.designSystem(.primaryControlBackground))
                         .clipShape(RoundedRectangle(cornerRadius: 10))
-                        .padding(.top, 30)
-                        .padding(.bottom, 15)
-
-                    Text("Build you million dollar idea in days")
+                        .padding(.top, 10)
+                    
+                    Text("The only friend you need this weekend")
                         .multilineTextAlignment(.center)
                         .font(.designSystem(.heading1))
                         .padding(.bottom, 30)
 
-                    Button {
-                        viewModel.startSignInWithAppleFlow(presentationAnchor: coordinator.navigationController.topViewController?.view.window)
-                    } label: {
-                        AppleButtonView(type: .continue, style: .black)
-                            .allowsHitTesting(false)
-                            .frame(height: 55)
-                    }
-
-                    PrimaryButton {
-                        coordinator.show(.signInWithEmail(authManager: viewModel.authManager, userManager: viewModel.userManager))
-
-                    } label: {
-                        Text("Sign In with Email")
-                    }
+                    signInButton
+                        .padding(.bottom, 3)
+                    signUpButton
                     
                     Text("or")
-                        .font(.designSystem(.body1))
-                        .padding(.vertical, 5)
+                        .font(.designSystem(.button2))
+                        .padding(.vertical, 10)
                     
-                    PrimaryButton {
-                        coordinator.show(.signUpWithEmail(authManager: viewModel.authManager, userManager: viewModel.userManager))
-
-                    } label: {
-                        Text("Sign Up with Email")
-                    }
-                     
-                     Spacer()
+                    signInWithAppleButton
                 }
             }
             .padding()
@@ -68,6 +50,34 @@ struct AuthenticationOptionsView: View {
                                 
                 coordinator.showErrorAlert("Failed to sign in with error: \n \(error.localizedDescription)")
             }
+    }
+    
+    var signInWithAppleButton: some View {
+        Button {
+            viewModel.startSignInWithAppleFlow(presentationAnchor: coordinator.navigationController.topViewController?.view.window)
+        } label: {
+            AppleButtonView(type: .continue, style: .black)
+                .allowsHitTesting(false)
+                .frame(height: 55)
+        }
+    }
+    
+    var signInButton: some View {
+        PrimaryButton {
+            coordinator.show(.signInWithEmail(authManager: viewModel.authManager, userManager: viewModel.userManager))
+
+        } label: {
+            Text("Sign In with Email")
+        }
+    }
+    
+    var signUpButton: some View {
+        PrimaryButton {
+            coordinator.show(.signUpWithEmail(authManager: viewModel.authManager, userManager: viewModel.userManager))
+
+        } label: {
+            Text("Sign Up with Email")
+        }
     }
 }
 

@@ -17,7 +17,19 @@ struct PrimaryButton<Content: View>: View {
                 .frame(height: 55)
                 .frame(maxWidth: .infinity)
                 .background(Color.designSystem(.primaryControlBackground))
-                .cornerRadius(5)
+                .cornerRadius(27.5)
         })
+    }
+}
+
+struct PrimaryButton_Previews: PreviewProvider {
+    static var previews: some View {
+        PrimaryButton(action: {
+        }) {
+            Text("Primary Button")
+        }
+        .previewLayout(.sizeThatFits)
+        .padding()
+        .previewDisplayName("Primary Button")
     }
 }

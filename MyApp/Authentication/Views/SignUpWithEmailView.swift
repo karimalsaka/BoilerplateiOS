@@ -17,7 +17,7 @@ struct SignUpWithEmailView: View {
             
             SecureField("Password", text: $viewModel.password)
                 .padding()
-                .background(Color.designSystem(.secondaryBackground).opacity(0.2))
+                .background(Color.designSystem(.secondaryBackground).opacity(0.5))
                 .cornerRadius(10)
             
             PrimaryButton {

@@ -48,19 +48,8 @@ struct SettingsView: View {
 
                 Spacer()
                     .listRowBackground(Color.clear)
-
-                PrimaryButton {
-                    Task {
-                        do {
-                            try viewModel.signOut()
-                            coordinator.userSignedOut()
-                        } catch {
-                            coordinator.showErrorAlert("Failed to sign out with error: \n \(error.localizedDescription)")
-                        }
-                    }
-                } label: {
-                    Text("Sign Out")
-                }
+                
+                signOutButton
                 .frame(maxWidth: .infinity)
                 .padding()
                 .listRowSeparator(.hidden)
@@ -79,6 +68,22 @@ struct SettingsView: View {
         }
     }
 
+    var signOutButton: some View {
+        PrimaryButton {
+            Task {
+                do {
+                    try viewModel.signOut()
+                    coordinator.userSignedOut()
+                } catch {
+                    coordinator.showErrorAlert("Failed to sign out with error: \n \(error.localizedDescription)")
+                }
+            }
+        } label: {
+            Text("Sign Out")
+        }
+
+    }
+    
     var subscriptionSection: some View {
         VStack(alignment: .center) {
             if let user = viewModel.user {

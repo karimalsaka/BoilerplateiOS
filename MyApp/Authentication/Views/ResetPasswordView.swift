@@ -11,7 +11,7 @@ struct ResetPasswordView: View {
         VStack(spacing: 15) {
             TextField("Email", text: $viewModel.email)
                 .padding()
-                .background(Color.designSystem(.secondaryBackground).opacity(0.2))
+                .background(Color.designSystem(.secondaryBackground).opacity(0.5))
                 .cornerRadius(5)
 
             PrimaryButton {

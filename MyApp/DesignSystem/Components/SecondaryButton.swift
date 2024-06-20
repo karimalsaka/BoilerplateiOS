@@ -18,9 +18,21 @@ struct SecondaryButton<Content: View>: View {
                 .frame(height: 55)
                 .frame(maxWidth: .infinity)
                 .overlay(
-                    RoundedRectangle(cornerRadius: 5)
+                    RoundedRectangle(cornerRadius: 27.5)
                         .stroke(Color.designSystem(.primaryControlBackground), lineWidth: 1)
                 )
         })
+    }
+}
+
+struct SecondaryButton_Previews: PreviewProvider {
+    static var previews: some View {
+        SecondaryButton(action: {
+        }) {
+            Text("Secondary Button")
+        }
+        .previewLayout(.sizeThatFits)
+        .padding()
+        .previewDisplayName("Primary Button")
     }
 }

@@ -22,11 +22,11 @@ extension Font {
         case .body4:
             return .system(size: 10)
         case .button1:
-            return .system(size: 20, weight: .bold)
+            return .system(size: 20, weight: .semibold)
         case .button2:
-            return .system(size: 18, weight: .bold)
+            return .system(size: 18, weight: .semibold)
         case .button3:
-            return .system(size: 16, weight: .bold)
+            return .system(size: 16, weight: .semibold)
         }
     }
 }
