@@ -55,7 +55,11 @@ class TabBarCoordinator<Router: NavigationRouter>: Coordinator<TabBarRouter> {
 
         switch tab {
         case .home:
-            let coordinator = HomeFlowCoordinator<HomeFlowRouter>(navigationController: navController, startingRoute: .home, tabbarCoordinator: self)
+            let coordinator = HomeFlowCoordinator<HomeFlowRouter>(
+                navigationController: navController,
+                startingRoute: .home,
+                tabbarCoordinator: self
+            )
             coordinator.start()
         case .settings:
             let coordinator = SettingsFlowCoordinator<SettingsFlowRouter>(

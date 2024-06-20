@@ -33,12 +33,6 @@ enum ColorName: String, CaseIterable {
     ///The background color of a disabled control's state
     case disabledControlBackground = "Control/disabledControlBackground"
     
-    ///The text color of a secondary control's state
-    case secondaryControlText = "Control/secondaryControlText"
-    
     ///The background color of a secondary control's state
     case secondaryControlBackground = "Control/secondaryControlBackground"
-    
-    ///The border color of a secondary control's state
-    case secondaryControlBorder = "Control/secondaryControlBorder"
 }

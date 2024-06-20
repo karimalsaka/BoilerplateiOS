@@ -1,6 +1,6 @@
 import SwiftUI
 
-enum TabBarRouter: NavigationRouter, Equatable {
+enum TabBarRouter: NavigationRouter, Equatable, CaseIterable {
     case home
     case settings
     
@@ -23,29 +23,15 @@ enum TabBarRouter: NavigationRouter, Equatable {
     }
     
     var tabIndex: Int {
-        switch self {
-        case .home:
-            return 0
-        case .settings:
-            return 1
-        }
+        return Self.allCases.firstIndex(of: self)!
     }
 
     var transition: NavigationTranisitionStyle {
-        switch self {
-
-        case .home, .settings:
-            return .push
-        }
+        return .push
     }
     
     @MainActor @ViewBuilder
     func view() -> some View {
-        switch self {
-        case .home:
-            EmptyView()
-        case .settings:
-            EmptyView()
-        }
+        EmptyView()
     }
 }

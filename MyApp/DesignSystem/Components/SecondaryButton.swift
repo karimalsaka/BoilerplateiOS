@@ -14,12 +14,12 @@ struct SecondaryButton<Content: View>: View {
             content
                 .font(.designSystem(.button1))
                 .tint(.blue)
-                .foregroundStyle(Color.designSystem(.secondaryControlText))
+                .foregroundStyle(Color.designSystem(.primaryControlBackground))
                 .frame(height: 55)
                 .frame(maxWidth: .infinity)
                 .overlay(
                     RoundedRectangle(cornerRadius: 5)
-                        .stroke(Color.designSystem(.secondaryControlText), lineWidth: 1)
+                        .stroke(Color.designSystem(.primaryControlBackground), lineWidth: 1)
                 )
         })
     }
