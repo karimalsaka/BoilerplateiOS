@@ -3,6 +3,8 @@ import AuthenticationServices
 
 struct AuthenticationOptionsView: View {
     @EnvironmentObject var coordinator: AuthenticationFlowCoordinator<AuthenticationFlowRouter>
+    @Environment(\.colorScheme) var colorScheme
+
     @StateObject private var viewModel: AuthenticationOptionsViewModel
     
     init(viewModel: AuthenticationOptionsViewModel) {
@@ -13,7 +15,7 @@ struct AuthenticationOptionsView: View {
             ScrollView {
                 VStack(alignment: .center, spacing: 10) {
                     
-                    Image("login_image")
+                    Image("logo_icon")
                         .resizable()
                         .aspectRatio(contentMode: .fit)
                         .frame(height: 300)

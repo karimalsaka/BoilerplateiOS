@@ -79,7 +79,6 @@
 		997BB8CD2BCE9229008BAD90 /* SettingsFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 997BB8CB2BCE9228008BAD90 /* SettingsFlowCoordinator.swift */; };
 		997BB8CE2BCE9229008BAD90 /* SettingsFlowRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 997BB8CC2BCE9228008BAD90 /* SettingsFlowRouter.swift */; };
 		997BB8D02BD02494008BAD90 /* ManageAccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 997BB8CF2BD02493008BAD90 /* ManageAccountView.swift */; };
-		9997F99C2C26DEA00057A05A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9997F99B2C26DEA00057A05A /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -128,7 +127,6 @@
 		997BB8CC2BCE9228008BAD90 /* SettingsFlowRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsFlowRouter.swift; sourceTree = "<group>"; };
 		997BB8CF2BD02493008BAD90 /* ManageAccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageAccountView.swift; sourceTree = "<group>"; };
 		997BB8D12BD04943008BAD90 /* MyApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MyApp.entitlements; sourceTree = "<group>"; };
-		9997F99B2C26DEA00057A05A /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -243,7 +241,6 @@
 		99388F7D2BC935BC008342BD /* MyApp */ = {
 			isa = PBXGroup;
 			children = (
-				9997F99B2C26DEA00057A05A /* LaunchScreen.storyboard */,
 				9938B0BA2BD7801B00D448B0 /* GoogleService-Info.plist */,
 				997BB8D12BD04943008BAD90 /* MyApp.entitlements */,
 				99388F7E2BC935BC008342BD /* MyAppApp.swift */,
@@ -534,7 +531,6 @@
 			files = (
 				99388F862BC935BD008342BD /* Preview Assets.xcassets in Resources */,
 				99388F832BC935BD008342BD /* Assets.xcassets in Resources */,
-				9997F99C2C26DEA00057A05A /* LaunchScreen.storyboard in Resources */,
 				994A27402BD810FB0062CB3A /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -716,6 +712,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_ENTITLEMENTS = MyApp/MyApp.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
@@ -750,6 +747,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_ENTITLEMENTS = MyApp/MyApp.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
