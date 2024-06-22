@@ -65,7 +65,6 @@
 		994A273A2BD7F9A30062CB3A /* RevenueCat in Frameworks */ = {isa = PBXBuildFile; productRef = 994A27392BD7F9A30062CB3A /* RevenueCat */; };
 		994A273C2BD7F9A30062CB3A /* RevenueCatUI in Frameworks */ = {isa = PBXBuildFile; productRef = 994A273B2BD7F9A30062CB3A /* RevenueCatUI */; };
 		994A273F2BD80CA20062CB3A /* PurchasesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994A273E2BD80CA20062CB3A /* PurchasesManager.swift */; };
-		994A27402BD810FB0062CB3A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9938B0BA2BD7801B00D448B0 /* GoogleService-Info.plist */; };
 		995176372BEF347200EF9B8A /* PaywallView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 995176362BEF347200EF9B8A /* PaywallView.swift */; };
 		9951763A2BEF415D00EF9B8A /* Color+DesignSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 995176392BEF415D00EF9B8A /* Color+DesignSystem.swift */; };
 		9951763C2BEF41F000EF9B8A /* ColorName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9951763B2BEF41F000EF9B8A /* ColorName.swift */; };
@@ -111,7 +110,6 @@
 		99388FEB2BCA9DCD008342BD /* HomeFlowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeFlowCoordinator.swift; sourceTree = "<group>"; };
 		9938B0A42BD3F71000D448B0 /* Coordinator+UIAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Coordinator+UIAlert.swift"; sourceTree = "<group>"; };
 		9938B0A62BD43B1500D448B0 /* Coordinator+AppTrackingTransparency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Coordinator+AppTrackingTransparency.swift"; sourceTree = "<group>"; };
-		9938B0BA2BD7801B00D448B0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		994A273E2BD80CA20062CB3A /* PurchasesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchasesManager.swift; sourceTree = "<group>"; };
 		995176362BEF347200EF9B8A /* PaywallView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaywallView.swift; sourceTree = "<group>"; };
 		995176392BEF415D00EF9B8A /* Color+DesignSystem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+DesignSystem.swift"; sourceTree = "<group>"; };
@@ -241,7 +239,6 @@
 		99388F7D2BC935BC008342BD /* MyApp */ = {
 			isa = PBXGroup;
 			children = (
-				9938B0BA2BD7801B00D448B0 /* GoogleService-Info.plist */,
 				997BB8D12BD04943008BAD90 /* MyApp.entitlements */,
 				99388F7E2BC935BC008342BD /* MyAppApp.swift */,
 				99388FC52BC93D3A008342BD /* AppDelegate.swift */,
@@ -531,7 +528,6 @@
 			files = (
 				99388F862BC935BD008342BD /* Preview Assets.xcassets in Resources */,
 				99388F832BC935BD008342BD /* Assets.xcassets in Resources */,
-				994A27402BD810FB0062CB3A /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
