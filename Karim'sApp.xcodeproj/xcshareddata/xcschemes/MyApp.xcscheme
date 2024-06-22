@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "99388F7A2BC935BC008342BD"
-               BuildableName = "MyApp.app"
-               BlueprintName = "MyApp"
-               ReferencedContainer = "container:MyApp.xcodeproj">
+               BuildableName = "Karim&apos;sApp.app"
+               BlueprintName = "Karim&apos;sApp"
+               ReferencedContainer = "container:Karim&apos;sApp.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -44,9 +44,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "99388F7A2BC935BC008342BD"
-            BuildableName = "MyApp.app"
-            BlueprintName = "MyApp"
-            ReferencedContainer = "container:MyApp.xcodeproj">
+            BuildableName = "Karim&apos;sApp.app"
+            BlueprintName = "Karim&apos;sApp"
+            ReferencedContainer = "container:Karim&apos;sApp.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -61,9 +61,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "99388F7A2BC935BC008342BD"
-            BuildableName = "MyApp.app"
-            BlueprintName = "MyApp"
-            ReferencedContainer = "container:MyApp.xcodeproj">
+            BuildableName = "Karim&apos;sApp.app"
+            BlueprintName = "Karim&apos;sApp"
+            ReferencedContainer = "container:Karim&apos;sApp.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

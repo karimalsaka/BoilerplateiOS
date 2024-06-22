@@ -79,6 +79,7 @@
 		997BB8CD2BCE9229008BAD90 /* SettingsFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 997BB8CB2BCE9228008BAD90 /* SettingsFlowCoordinator.swift */; };
 		997BB8CE2BCE9229008BAD90 /* SettingsFlowRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 997BB8CC2BCE9228008BAD90 /* SettingsFlowRouter.swift */; };
 		997BB8D02BD02494008BAD90 /* ManageAccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 997BB8CF2BD02493008BAD90 /* ManageAccountView.swift */; };
+		9997F99C2C26DEA00057A05A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9997F99B2C26DEA00057A05A /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -90,7 +91,7 @@
 		99297BCC2BD11B040027169D /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		99297BD02BD11B360027169D /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
 		99297BD22BD11B570027169D /* ManageAccountViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageAccountViewModel.swift; sourceTree = "<group>"; };
-		99388F7B2BC935BC008342BD /* MyApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		99388F7B2BC935BC008342BD /* Karim'sApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Karim'sApp.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		99388F7E2BC935BC008342BD /* MyAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAppApp.swift; sourceTree = "<group>"; };
 		99388F822BC935BD008342BD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		99388F852BC935BD008342BD /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -127,6 +128,7 @@
 		997BB8CC2BCE9228008BAD90 /* SettingsFlowRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsFlowRouter.swift; sourceTree = "<group>"; };
 		997BB8CF2BD02493008BAD90 /* ManageAccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageAccountView.swift; sourceTree = "<group>"; };
 		997BB8D12BD04943008BAD90 /* MyApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MyApp.entitlements; sourceTree = "<group>"; };
+		9997F99B2C26DEA00057A05A /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -233,7 +235,7 @@
 		99388F7C2BC935BC008342BD /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				99388F7B2BC935BC008342BD /* MyApp.app */,
+				99388F7B2BC935BC008342BD /* Karim'sApp.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -241,6 +243,7 @@
 		99388F7D2BC935BC008342BD /* MyApp */ = {
 			isa = PBXGroup;
 			children = (
+				9997F99B2C26DEA00057A05A /* LaunchScreen.storyboard */,
 				9938B0BA2BD7801B00D448B0 /* GoogleService-Info.plist */,
 				997BB8D12BD04943008BAD90 /* MyApp.entitlements */,
 				99388F7E2BC935BC008342BD /* MyAppApp.swift */,
@@ -439,9 +442,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		99388F7A2BC935BC008342BD /* MyApp */ = {
+		99388F7A2BC935BC008342BD /* Karim'sApp */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 99388F892BC935BD008342BD /* Build configuration list for PBXNativeTarget "MyApp" */;
+			buildConfigurationList = 99388F892BC935BD008342BD /* Build configuration list for PBXNativeTarget "Karim'sApp" */;
 			buildPhases = (
 				99388F772BC935BC008342BD /* Sources */,
 				99388F782BC935BC008342BD /* Frameworks */,
@@ -451,7 +454,7 @@
 			);
 			dependencies = (
 			);
-			name = MyApp;
+			name = "Karim'sApp";
 			packageProductDependencies = (
 				99388F8F2BC93CE5008342BD /* FirebaseAnalytics */,
 				99388F912BC93CE5008342BD /* FirebaseAnalyticsOnDeviceConversion */,
@@ -484,7 +487,7 @@
 				994A273B2BD7F9A30062CB3A /* RevenueCatUI */,
 			);
 			productName = MyApp;
-			productReference = 99388F7B2BC935BC008342BD /* MyApp.app */;
+			productReference = 99388F7B2BC935BC008342BD /* Karim'sApp.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -502,7 +505,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 99388F762BC935BC008342BD /* Build configuration list for PBXProject "MyApp" */;
+			buildConfigurationList = 99388F762BC935BC008342BD /* Build configuration list for PBXProject "Karim'sApp" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -519,7 +522,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				99388F7A2BC935BC008342BD /* MyApp */,
+				99388F7A2BC935BC008342BD /* Karim'sApp */,
 			);
 		};
 /* End PBXProject section */
@@ -531,6 +534,7 @@
 			files = (
 				99388F862BC935BD008342BD /* Preview Assets.xcassets in Resources */,
 				99388F832BC935BD008342BD /* Assets.xcassets in Resources */,
+				9997F99C2C26DEA00057A05A /* LaunchScreen.storyboard in Resources */,
 				994A27402BD810FB0062CB3A /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -724,6 +728,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -757,6 +762,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -776,7 +782,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		99388F762BC935BC008342BD /* Build configuration list for PBXProject "MyApp" */ = {
+		99388F762BC935BC008342BD /* Build configuration list for PBXProject "Karim'sApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				99388F872BC935BD008342BD /* Debug */,
@@ -785,7 +791,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		99388F892BC935BD008342BD /* Build configuration list for PBXNativeTarget "MyApp" */ = {
+		99388F892BC935BD008342BD /* Build configuration list for PBXNativeTarget "Karim'sApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				99388F8A2BC935BD008342BD /* Debug */,
