@@ -14,7 +14,6 @@ struct AuthenticationOptionsView: View {
     var body: some View {
             ScrollView {
                 VStack(alignment: .center, spacing: 10) {
-                    
                     Image("logo_icon")
                         .resizable()
                         .aspectRatio(contentMode: .fit)
@@ -38,8 +37,8 @@ struct AuthenticationOptionsView: View {
                     
                     signInWithAppleButton
                 }
+                .padding()
             }
-            .padding()
             .frame(maxWidth: .infinity, maxHeight: .infinity)
             .background(Color.designSystem(.primaryBackground))
             .onChange(of: viewModel.didSignInWithAppleSuccessfully) { _, success in
