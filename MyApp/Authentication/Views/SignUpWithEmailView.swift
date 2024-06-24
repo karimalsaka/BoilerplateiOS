@@ -12,7 +12,7 @@ struct SignUpWithEmailView: View {
         VStack {
             TextField("Email", text: $viewModel.email)
                 .padding()
-                .background(Color.designSystem(.secondaryBackground).opacity(0.2))
+                .background(Color.designSystem(.secondaryBackground).opacity(0.5))
                 .cornerRadius(10)
             
             SecureField("Password", text: $viewModel.password)
