@@ -2,7 +2,7 @@ import SwiftUI
 import RevenueCat
 
 @main
-struct MyAppApp: App {
+struct MyApp: App {
     @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
     init() {
         /// Pass your RevenueCat api key here
