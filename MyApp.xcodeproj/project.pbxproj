@@ -72,6 +72,7 @@
 		995176422BEF4F0700EF9B8A /* Font+DesignSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 995176412BEF4F0700EF9B8A /* Font+DesignSystem.swift */; };
 		995176452BF0D8DE00EF9B8A /* PrimaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 995176442BF0D8DE00EF9B8A /* PrimaryButton.swift */; };
 		995176472BF0D8F600EF9B8A /* SecondaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 995176462BF0D8F600EF9B8A /* SecondaryButton.swift */; };
+		995B533F2C5B959200B50121 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 995B533E2C5B959200B50121 /* GoogleService-Info.plist */; };
 		997BB8C42BCE8B1F008BAD90 /* AuthenticationFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 997BB8C32BCE8B1F008BAD90 /* AuthenticationFlowCoordinator.swift */; };
 		997BB8C72BCE8B2B008BAD90 /* AuthenticationFlowRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 997BB8C62BCE8B2B008BAD90 /* AuthenticationFlowRouter.swift */; };
 		997BB8C92BCE91EC008BAD90 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 997BB8C82BCE91DE008BAD90 /* SettingsView.swift */; };
@@ -89,7 +90,7 @@
 		99297BCC2BD11B040027169D /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		99297BD02BD11B360027169D /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
 		99297BD22BD11B570027169D /* ManageAccountViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageAccountViewModel.swift; sourceTree = "<group>"; };
-		99388F7B2BC935BC008342BD /* Karim'sApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Karim'sApp.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		99388F7B2BC935BC008342BD /* MovieMate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MovieMate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		99388F7E2BC935BC008342BD /* MyAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAppApp.swift; sourceTree = "<group>"; };
 		99388F822BC935BD008342BD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		99388F852BC935BD008342BD /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -118,6 +119,7 @@
 		995176412BEF4F0700EF9B8A /* Font+DesignSystem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Font+DesignSystem.swift"; sourceTree = "<group>"; };
 		995176442BF0D8DE00EF9B8A /* PrimaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButton.swift; sourceTree = "<group>"; };
 		995176462BF0D8F600EF9B8A /* SecondaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondaryButton.swift; sourceTree = "<group>"; };
+		995B533E2C5B959200B50121 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		997BB8C32BCE8B1F008BAD90 /* AuthenticationFlowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationFlowCoordinator.swift; sourceTree = "<group>"; };
 		997BB8C62BCE8B2B008BAD90 /* AuthenticationFlowRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationFlowRouter.swift; sourceTree = "<group>"; };
 		997BB8C82BCE91DE008BAD90 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
@@ -231,7 +233,7 @@
 		99388F7C2BC935BC008342BD /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				99388F7B2BC935BC008342BD /* Karim'sApp.app */,
+				99388F7B2BC935BC008342BD /* MovieMate.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -239,6 +241,7 @@
 		99388F7D2BC935BC008342BD /* MyApp */ = {
 			isa = PBXGroup;
 			children = (
+				995B533E2C5B959200B50121 /* GoogleService-Info.plist */,
 				997BB8D12BD04943008BAD90 /* MyApp.entitlements */,
 				99388F7E2BC935BC008342BD /* MyAppApp.swift */,
 				99388FC52BC93D3A008342BD /* AppDelegate.swift */,
@@ -436,9 +439,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		99388F7A2BC935BC008342BD /* Karim'sApp */ = {
+		99388F7A2BC935BC008342BD /* MovieMate */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 99388F892BC935BD008342BD /* Build configuration list for PBXNativeTarget "Karim'sApp" */;
+			buildConfigurationList = 99388F892BC935BD008342BD /* Build configuration list for PBXNativeTarget "MovieMate" */;
 			buildPhases = (
 				99388F772BC935BC008342BD /* Sources */,
 				99388F782BC935BC008342BD /* Frameworks */,
@@ -448,7 +451,7 @@
 			);
 			dependencies = (
 			);
-			name = "Karim'sApp";
+			name = MovieMate;
 			packageProductDependencies = (
 				99388F8F2BC93CE5008342BD /* FirebaseAnalytics */,
 				99388F912BC93CE5008342BD /* FirebaseAnalyticsOnDeviceConversion */,
@@ -481,7 +484,7 @@
 				994A273B2BD7F9A30062CB3A /* RevenueCatUI */,
 			);
 			productName = MyApp;
-			productReference = 99388F7B2BC935BC008342BD /* Karim'sApp.app */;
+			productReference = 99388F7B2BC935BC008342BD /* MovieMate.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -499,7 +502,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 99388F762BC935BC008342BD /* Build configuration list for PBXProject "Karim'sApp" */;
+			buildConfigurationList = 99388F762BC935BC008342BD /* Build configuration list for PBXProject "MyApp" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -516,7 +519,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				99388F7A2BC935BC008342BD /* Karim'sApp */,
+				99388F7A2BC935BC008342BD /* MovieMate */,
 			);
 		};
 /* End PBXProject section */
@@ -528,6 +531,7 @@
 			files = (
 				99388F862BC935BD008342BD /* Preview Assets.xcassets in Resources */,
 				99388F832BC935BD008342BD /* Assets.xcassets in Resources */,
+				995B533F2C5B959200B50121 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -717,6 +721,7 @@
 				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = MovieMate;
 				INFOPLIST_KEY_NSUserTrackingUsageDescription = "Would you like to get personalised ads?";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -752,6 +757,7 @@
 				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = MovieMate;
 				INFOPLIST_KEY_NSUserTrackingUsageDescription = "Would you like to get personalised ads?";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -776,7 +782,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		99388F762BC935BC008342BD /* Build configuration list for PBXProject "Karim'sApp" */ = {
+		99388F762BC935BC008342BD /* Build configuration list for PBXProject "MyApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				99388F872BC935BD008342BD /* Debug */,
@@ -785,7 +791,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		99388F892BC935BD008342BD /* Build configuration list for PBXNativeTarget "Karim'sApp" */ = {
+		99388F892BC935BD008342BD /* Build configuration list for PBXNativeTarget "MovieMate" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				99388F8A2BC935BD008342BD /* Debug */,
