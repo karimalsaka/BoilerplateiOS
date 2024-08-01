@@ -72,7 +72,6 @@
 		995176422BEF4F0700EF9B8A /* Font+DesignSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 995176412BEF4F0700EF9B8A /* Font+DesignSystem.swift */; };
 		995176452BF0D8DE00EF9B8A /* PrimaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 995176442BF0D8DE00EF9B8A /* PrimaryButton.swift */; };
 		995176472BF0D8F600EF9B8A /* SecondaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 995176462BF0D8F600EF9B8A /* SecondaryButton.swift */; };
-		995B533F2C5B959200B50121 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 995B533E2C5B959200B50121 /* GoogleService-Info.plist */; };
 		997BB8C42BCE8B1F008BAD90 /* AuthenticationFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 997BB8C32BCE8B1F008BAD90 /* AuthenticationFlowCoordinator.swift */; };
 		997BB8C72BCE8B2B008BAD90 /* AuthenticationFlowRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 997BB8C62BCE8B2B008BAD90 /* AuthenticationFlowRouter.swift */; };
 		997BB8C92BCE91EC008BAD90 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 997BB8C82BCE91DE008BAD90 /* SettingsView.swift */; };
@@ -119,7 +118,6 @@
 		995176412BEF4F0700EF9B8A /* Font+DesignSystem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Font+DesignSystem.swift"; sourceTree = "<group>"; };
 		995176442BF0D8DE00EF9B8A /* PrimaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButton.swift; sourceTree = "<group>"; };
 		995176462BF0D8F600EF9B8A /* SecondaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondaryButton.swift; sourceTree = "<group>"; };
-		995B533E2C5B959200B50121 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		997BB8C32BCE8B1F008BAD90 /* AuthenticationFlowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationFlowCoordinator.swift; sourceTree = "<group>"; };
 		997BB8C62BCE8B2B008BAD90 /* AuthenticationFlowRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationFlowRouter.swift; sourceTree = "<group>"; };
 		997BB8C82BCE91DE008BAD90 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
@@ -241,7 +239,6 @@
 		99388F7D2BC935BC008342BD /* MyApp */ = {
 			isa = PBXGroup;
 			children = (
-				995B533E2C5B959200B50121 /* GoogleService-Info.plist */,
 				997BB8D12BD04943008BAD90 /* MyApp.entitlements */,
 				99388F7E2BC935BC008342BD /* MyAppApp.swift */,
 				99388FC52BC93D3A008342BD /* AppDelegate.swift */,
@@ -531,7 +528,6 @@
 			files = (
 				99388F862BC935BD008342BD /* Preview Assets.xcassets in Resources */,
 				99388F832BC935BD008342BD /* Assets.xcassets in Resources */,
-				995B533F2C5B959200B50121 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
