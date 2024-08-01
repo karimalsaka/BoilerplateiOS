@@ -6,7 +6,7 @@ struct MyAppApp: App {
     @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
     init() {
         /// Pass your RevenueCat api key here
-//        Purchases.configure(withAPIKey: "appl_qtHpVUsFnvarJzcXiNXRrWQZjDb")
+//        Purchases.configure(withAPIKey: "REVENUE_CAT_API_KEY_HERE")
     }
 
     var body: some Scene {
