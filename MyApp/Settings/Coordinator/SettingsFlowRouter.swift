@@ -1,9 +1,18 @@
 import SwiftUI
 
 enum SettingsFlowRouter: NavigationRouter, Equatable {
+    static func == (lhs: SettingsFlowRouter, rhs: SettingsFlowRouter) -> Bool {
+        switch (lhs, rhs) {
+        case (.paywall(let lhsOnPurchaseComplete), .paywall(let rhsOnPurchaseComplete)):
+            return lhsOnPurchaseComplete == nil && rhsOnPurchaseComplete == nil
+        default:
+            return true
+        }
+    }
+    
     case settings(authManager: AuthManager, userManager: UserManager)
     case accountSettings
-    case paywall
+    case paywall(onPurchaseComplete: (() -> Void)? = nil)
         
     var transition: NavigationTranisitionStyle {
         switch self {
@@ -23,8 +32,8 @@ enum SettingsFlowRouter: NavigationRouter, Equatable {
         case .accountSettings:
             let viewModel = ManageAccountViewModel()
             ManageAccountView(viewModel: viewModel)
-        case .paywall:
-            PaywallView()
+        case .paywall(let onPurchaseComplete):
+            PaywallView(onPurchaseComplete: onPurchaseComplete)
         }
     }
 }

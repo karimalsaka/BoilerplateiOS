@@ -105,7 +105,11 @@ struct SettingsView: View {
 
             PrimaryButton {
                 if !viewModel.isUserSubscribed {
-                    coordinator.show(.paywall)
+                    coordinator.show(.paywall(onPurchaseComplete: {
+                        Task {
+                            await viewModel.getSubscriptionStatus()
+                        }
+                    }))
                 } else {
                     Task {
                         do {
