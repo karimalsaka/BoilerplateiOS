@@ -15,7 +15,6 @@
 		99297BCD2BD11B040027169D /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99297BCC2BD11B040027169D /* HomeViewModel.swift */; };
 		99297BD12BD11B360027169D /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99297BD02BD11B360027169D /* SettingsViewModel.swift */; };
 		99297BD32BD11B570027169D /* ManageAccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99297BD22BD11B570027169D /* ManageAccountViewModel.swift */; };
-		99388F7F2BC935BC008342BD /* MyAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99388F7E2BC935BC008342BD /* MyAppApp.swift */; };
 		99388F832BC935BD008342BD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 99388F822BC935BD008342BD /* Assets.xcassets */; };
 		99388F862BC935BD008342BD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 99388F852BC935BD008342BD /* Preview Assets.xcassets */; };
 		99388F902BC93CE5008342BD /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 99388F8F2BC93CE5008342BD /* FirebaseAnalytics */; };
@@ -78,6 +77,7 @@
 		997BB8CD2BCE9229008BAD90 /* SettingsFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 997BB8CB2BCE9228008BAD90 /* SettingsFlowCoordinator.swift */; };
 		997BB8CE2BCE9229008BAD90 /* SettingsFlowRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 997BB8CC2BCE9228008BAD90 /* SettingsFlowRouter.swift */; };
 		997BB8D02BD02494008BAD90 /* ManageAccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 997BB8CF2BD02493008BAD90 /* ManageAccountView.swift */; };
+		99A865E32C5CE8090056DFA2 /* MyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A865E22C5CE8090056DFA2 /* MyApp.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -90,7 +90,6 @@
 		99297BD02BD11B360027169D /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
 		99297BD22BD11B570027169D /* ManageAccountViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageAccountViewModel.swift; sourceTree = "<group>"; };
 		99388F7B2BC935BC008342BD /* MovieMate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MovieMate.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		99388F7E2BC935BC008342BD /* MyAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAppApp.swift; sourceTree = "<group>"; };
 		99388F822BC935BD008342BD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		99388F852BC935BD008342BD /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		99388FC52BC93D3A008342BD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -125,6 +124,7 @@
 		997BB8CC2BCE9228008BAD90 /* SettingsFlowRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsFlowRouter.swift; sourceTree = "<group>"; };
 		997BB8CF2BD02493008BAD90 /* ManageAccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageAccountView.swift; sourceTree = "<group>"; };
 		997BB8D12BD04943008BAD90 /* MyApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MyApp.entitlements; sourceTree = "<group>"; };
+		99A865E22C5CE8090056DFA2 /* MyApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyApp.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -240,7 +240,7 @@
 			isa = PBXGroup;
 			children = (
 				997BB8D12BD04943008BAD90 /* MyApp.entitlements */,
-				99388F7E2BC935BC008342BD /* MyAppApp.swift */,
+				99A865E22C5CE8090056DFA2 /* MyApp.swift */,
 				99388FC52BC93D3A008342BD /* AppDelegate.swift */,
 				995176382BEF414500EF9B8A /* DesignSystem */,
 				99388FD82BCA95B5008342BD /* Navigation */,
@@ -556,7 +556,6 @@
 				99388FC92BC93FDC008342BD /* SignInWithEmailView.swift in Sources */,
 				997BB8C42BCE8B1F008BAD90 /* AuthenticationFlowCoordinator.swift in Sources */,
 				99388FED2BCAA25C008342BD /* HomeFlowRouter.swift in Sources */,
-				99388F7F2BC935BC008342BD /* MyAppApp.swift in Sources */,
 				995176452BF0D8DE00EF9B8A /* PrimaryButton.swift in Sources */,
 				995176372BEF347200EF9B8A /* PaywallView.swift in Sources */,
 				995176422BEF4F0700EF9B8A /* Font+DesignSystem.swift in Sources */,
@@ -570,6 +569,7 @@
 				9951763A2BEF415D00EF9B8A /* Color+DesignSystem.swift in Sources */,
 				994A273F2BD80CA20062CB3A /* PurchasesManager.swift in Sources */,
 				99388FE12BCA96EA008342BD /* TabbarRouter.swift in Sources */,
+				99A865E32C5CE8090056DFA2 /* MyApp.swift in Sources */,
 				9938B0A72BD43B1600D448B0 /* Coordinator+AppTrackingTransparency.swift in Sources */,
 				9938B0A52BD3F71000D448B0 /* Coordinator+UIAlert.swift in Sources */,
 				9951763C2BEF41F000EF9B8A /* ColorName.swift in Sources */,
